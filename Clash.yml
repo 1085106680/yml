@@ -53,6 +53,7 @@ proxies:
     #   - h2
     #   - http/1.1
     # skip-cert-verify: true
+  - { name: 甲骨文|新加坡|2G口|流媒体解锁, type: trojan, server: oraclexjp.easygoml.net, port: 60089, password: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, udp: true, sni: oraclexjp.easygoml.net, skip-cert-verify: true }
 proxy-groups:
   - name: PROXY
     type: select
@@ -66,6 +67,7 @@ proxy-groups:
     proxies:
       - vless-us（解锁Netflix自制剧）
       - SP-hk-流媒体解锁
+      - 甲骨文|新加坡|2G口|流媒体解锁
       - PROXY
       - DIRECT
   - name: 🎥 disney+
@@ -73,6 +75,7 @@ proxy-groups:
     proxies:
       - SP-hk-流媒体解锁
       - vless-us（解锁Netflix自制剧）
+      - 甲骨文|新加坡|2G口|流媒体解锁
       - PROXY
       - DIRECT
   - name: bilibili
