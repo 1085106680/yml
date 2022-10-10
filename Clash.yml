@@ -60,12 +60,12 @@ proxy-groups:
     proxies:
       - aws-hk
       - aws-jp
-      - aws-us（解锁Netflix自制剧）
+      - aws-us（仅解锁Netflix自制剧）
       - SP-hk-流媒体解锁
   - name: 🎥 Netflix
     type: select
     proxies:
-      - aws-us（解锁Netflix自制剧）
+      - aws-us（仅解锁Netflix自制剧）
       - SP-hk-流媒体解锁
       - Oracle-SP-流媒体解锁
       - PROXY
@@ -74,7 +74,7 @@ proxy-groups:
     type: select
     proxies:
       - SP-hk-流媒体解锁
-      - aws-us（解锁Netflix自制剧）
+      - aws-us（仅解锁Netflix自制剧）
       - Oracle-SP-流媒体解锁
       - PROXY
       - DIRECT
