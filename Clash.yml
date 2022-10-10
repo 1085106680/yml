@@ -4,7 +4,7 @@ dns:
   listen: 0.0.0.0:53
 ipv6: false 
 proxies:
-  - name: "vless-hk"
+  - name: "aws-hk"
     type: vless
     server: hk.haodigtal.xyz
     port: 443
@@ -19,7 +19,7 @@ proxies:
       headers:
         Host: hk.haodigtal.xyz
 
-  - name: "vless-jp"
+  - name: "aws-jp"
     type: vless
     server: jp.haodigtal.xyz
     port: 443
@@ -31,7 +31,7 @@ proxies:
     servername: jp.haodigtal.xyz # priority over wss host
     # skip-cert-verify: true   
 
-  - name: "vless-us（解锁Netflix自制剧）"
+  - name: "aws-us（仅解锁Netflix自制剧）"
     type: vless
     server: us.haodigtal.xyz
     port: 443
@@ -58,14 +58,14 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - vless-hk
-      - vless-jp
-      - vless-us（解锁Netflix自制剧）
+      - aws-hk
+      - aws-jp
+      - aws-us（解锁Netflix自制剧）
       - SP-hk-流媒体解锁
   - name: 🎥 Netflix
     type: select
     proxies:
-      - vless-us（解锁Netflix自制剧）
+      - aws-us（解锁Netflix自制剧）
       - SP-hk-流媒体解锁
       - Oracle-SP-流媒体解锁
       - PROXY
@@ -74,7 +74,7 @@ proxy-groups:
     type: select
     proxies:
       - SP-hk-流媒体解锁
-      - vless-us（解锁Netflix自制剧）
+      - aws-us（解锁Netflix自制剧）
       - Oracle-SP-流媒体解锁
       - PROXY
       - DIRECT
