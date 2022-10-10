@@ -31,18 +31,6 @@ proxies:
     servername: jp.haodigtal.xyz # priority over wss host
     # skip-cert-verify: true   
 
-  - name: "vless-kr"
-    type: vless
-    server: kr.haodigtal.xyz
-    port: 443
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
-    udp: false
-    tls: true
-    network: tcp
-    flow: xtls-rprx-direct
-    servername: kr.haodigtal.xyz # priority over wss host
-    # skip-cert-verify: true
-
   - name: "vless-us（解锁Netflix自制剧）"
     type: vless
     server: us.haodigtal.xyz
@@ -71,7 +59,6 @@ proxy-groups:
     proxies:
       - vless-hk
       - vless-jp
-      - vless-kr
       - vless-us（解锁Netflix自制剧）
       - SP-hk-流媒体解锁
   - name: 🎥 Netflix
@@ -190,6 +177,7 @@ rule-providers:
     path: ./ruleset/applications.yaml
     interval: 86400
 rules:
+ - DOMAIN-SUFFIX,github.com,PROXY
  - DOMAIN-SUFFIX,bilibili.com,bilibili
  - DOMAIN-SUFFIX,bilibili.net,bilibili
  - DOMAIN-SUFFIX,bilibili.cn,bilibili
