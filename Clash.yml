@@ -43,7 +43,7 @@ proxies:
     servername: kr.haodigtal.xyz # priority over wss host
     # skip-cert-verify: true
   
-  - { name: SP-流媒体解锁, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
+  - { name: aws-SP, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
   - { name: Oracle-SP-流媒体解锁, type: trojan, server: oraclexjp.easygoml.net, port: 60089, password: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, udp: true, sni: oraclexjp.easygoml.net, skip-cert-verify: true }
 proxy-groups:
   - name: PROXY
@@ -52,19 +52,17 @@ proxy-groups:
       - aws-hk
       - aws-jp
       - aws-us-仅解锁Netflix自制剧
-      - SP-流媒体解锁
+      - aws-SP
   - name: 🎥 Netflix
     type: select
     proxies:
       - aws-us-仅解锁Netflix自制剧
-      - SP-流媒体解锁
       - Oracle-SP-流媒体解锁
       - PROXY
       - DIRECT
   - name: 🎥 disney+
     type: select
     proxies:
-      - SP-流媒体解锁
       - aws-us-仅解锁Netflix自制剧
       - Oracle-SP-流媒体解锁
       - PROXY
