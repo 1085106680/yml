@@ -52,7 +52,7 @@ proxy-groups:
       - aws-hk
       - aws-jp
       - aws-us-仅解锁Netflix自制剧
-      - SP-hk-流媒体解锁
+      - SP-流媒体解锁
   - name: 🎥 Netflix
     type: select
     proxies:
