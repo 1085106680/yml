@@ -59,7 +59,6 @@ proxy-groups:
       - aws-us-仅解锁Netflix自制剧
       - SP-流媒体解锁
       - Oracle-SP-流媒体解锁
-      - SP-80
       - PROXY
       - DIRECT
   - name: 🎥 disney+
