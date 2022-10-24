@@ -35,6 +35,7 @@ proxy-groups:
   - name: 🎥 disney+
     type: select
     proxies:
+      - az-hk
       - Oracle-SP-流媒体解锁
       - PROXY
       - DIRECT
