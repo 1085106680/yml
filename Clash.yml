@@ -4,7 +4,7 @@ dns:
   listen: 0.0.0.0:53
 ipv6: false 
 proxies:
-  - name: "az-hk"
+  - name: "AZ-HK"
     type: vless
     server: hk.haodigtal.xyz
     port: 443
@@ -15,7 +15,7 @@ proxies:
     flow: xtls-rprx-direct
     servername: hk.haodigtal.xyz # priority over wss host
     # skip-cert-verify: true   
-  - name: "az-hk-ml"
+  - name: "AZ-HK-ml"
     type: vmess
     server: hk.haodigtal.xyz
     port: 8080
@@ -41,10 +41,10 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - az-hk
+      - AZ-HK
       - aws-SP
       - Oracle-SP-流媒体解锁
-      - az-hk-ml
+      - AZ-HK-ml
   - name: 🎥 Netflix
     type: select
     proxies:
@@ -54,7 +54,7 @@ proxy-groups:
   - name: 🎥 disney+
     type: select
     proxies:
-      - az-hk
+      - AZ-HK
       - Oracle-SP-流媒体解锁
       - PROXY
       - DIRECT
