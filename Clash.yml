@@ -19,6 +19,7 @@ proxies:
   
   - { name: aws-SP, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
   - { name: Oracle-SP-流媒体解锁, type: trojan, server: oraclexjp.easygoml.net, port: 60089, password: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, udp: true, sni: oraclexjp.easygoml.net, skip-cert-verify: true }
+  - { name: az-hk-ml, type: vmess, server: hk.haodigtal.xyz, port: '8080', uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: a.189.cn } },
 proxy-groups:
   - name: PROXY
     type: select
@@ -26,6 +27,7 @@ proxy-groups:
       - az-hk
       - aws-SP
       - Oracle-SP-流媒体解锁
+      - az-hk-ml
   - name: 🎥 Netflix
     type: select
     proxies:
