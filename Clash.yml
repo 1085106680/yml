@@ -28,7 +28,7 @@ proxies:
     # servername: example.com # priority over wss host
     network: ws
     ws-opts:
-       path: /path
+       path: /
        headers:
          Host: a.189.cn
     #   max-early-data: 2048
