@@ -15,16 +15,16 @@ proxies:
     flow: xtls-rprx-direct
     servername: hk.haodigtal.xyz # priority over wss host
     # skip-cert-verify: true   
-  - name: "AZ-KR"
+  - name: "AZ-US"
     type: vless
-    server: kr.haodigtal.xyz
+    server: us.haodigtal.xyz
     port: 443
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
     udp: false
     tls: true
     network: tcp
     flow: xtls-rprx-direct
-    servername: kr.haodigtal.xyz # priority over wss host
+    servername: us.haodigtal.xyz # priority over wss host
     skip-cert-verify: true   
   - name: "AZ-HK-ml"
     type: vmess
@@ -52,7 +52,7 @@ proxy-groups:
     type: select
     proxies:
       - AZ-HK
-      - AZ-KR
+      - AZ-US
       - aws-SP
       - AZ-HK-ml
   - name: 🎥 Netflix
@@ -63,7 +63,7 @@ proxy-groups:
   - name: 🎥 disney+
     type: select
     proxies:
-      - AZ-KR
+      - AZ-US
       - PROXY
       - DIRECT
   - name: bilibili
