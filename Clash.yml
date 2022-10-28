@@ -15,7 +15,7 @@ proxies:
     flow: xtls-rprx-direct
     servername: hk.haodigtal.xyz # priority over wss host
     skip-cert-verify: true   
-  - name: "AZ-HK2"
+  - name: "AZ-HK2-disney+解锁"
     type: vless
     server: hk2.haodigtal.xyz
     port: 443
@@ -52,7 +52,7 @@ proxy-groups:
     type: select
     proxies:
       - AZ-HK
-      - AZ-HK2
+      - AZ-HK2-disney+解锁
       - aws-SP
       - AZ-HK-ml
   - name: 🎥 Netflix
@@ -63,7 +63,7 @@ proxy-groups:
   - name: 🎥 disney+
     type: select
     proxies:
-      - AZ-HK2
+      - AZ-HK2-disney+解锁
       - PROXY
       - DIRECT
   - name: bilibili
