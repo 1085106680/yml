@@ -57,7 +57,7 @@ proxies:
     skip-cert-verify: true     
   - name: "AZ-HK-ml"
     type: vmess
-    server: hk.haodigtal.xyz
+    server: hk.haodigtal.one
     port: 8080
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
