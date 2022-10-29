@@ -25,6 +25,25 @@ proxies:
     servername: hk.haodigtal.one # priority over wss host
     skip-cert-verify: true 
 
+  - name: "hysteria"
+    type: hysteria
+    server: hk.haodigtal.one
+    port: 6666
+    #auth_str: haoyue123123
+    obfs: haoyue123123
+    #alpn: h3
+    protocol: udp          #支持udp/wechat-video/faketcp
+    up: '500 Mbps'          #若不写单位，默认为Mbps
+    down: '500 Mbps'       #若不写单位，默认为Mbps
+    #sni: server.com
+    #skip-cert-verify: false
+    #recv_window_conn: 12582912
+    #recv_window: 52428800
+    #auth_str: "yubiyubi"
+    #ca: "./my.ca"
+    #ca_str: "xyz"
+    #disable_mtu_discovery: false
+
   - name: "AZ-JP"
     type: vless
     server: jp.haodigtal.one
@@ -62,6 +81,7 @@ proxy-groups:
     type: select
     proxies:
       - AZ-HK
+      - hysteria
       - AZ-JP  
       - aws-SP
       - AZ-HK-ml
