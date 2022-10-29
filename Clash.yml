@@ -2,6 +2,15 @@ mode: rule
 dns:
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
+  default-nameserver:          #解析非IP的dns用的dns服务器,只支持纯IP
+    - 223.6.6.6
+    - 8.8.8.8
+  enhanced-mode: redir-host
+  fake-ip-range: 198.18.0.1/16
+  nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
+    - 223.6.6.6
+    - https://doh.pub/dns-query
+    - tls://101.101.101.101:853
 ipv6: false 
 proxies:
   - name: "AZ-HK"
