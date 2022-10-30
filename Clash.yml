@@ -22,7 +22,7 @@ proxies:
     network: tcp
     flow: xtls-rprx-direct
     servername: hk.haodigtal.one # priority over wss host
-    #skip-cert-verify: true 
+    skip-cert-verify: false 
 
   - name: "hysteria"
     type: hysteria
@@ -53,7 +53,7 @@ proxies:
     network: tcp
     flow: xtls-rprx-direct
     servername: jp.haodigtal.one # priority over wss host
-    #skip-cert-verify: true 
+    skip-cert-verify: false
 
   - name: "digital-US"
     type: vless
@@ -65,7 +65,7 @@ proxies:
     network: tcp
     flow: xtls-rprx-direct
     servername: uss.haodigtal.xyz # priority over wss host
-    #skip-cert-verify: true 
+    skip-cert-verify: false
             
   - name: "AZ-HK-ml"
     type: vmess
