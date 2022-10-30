@@ -54,7 +54,18 @@ proxies:
     network: tcp
     flow: xtls-rprx-direct
     servername: jp.haodigtal.one # priority over wss host
-    skip-cert-verify: true     
+    skip-cert-verify: true 
+  - name: "digital-SP"
+    type: vless
+    server: us.haodigtal.one
+    port: 443
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
+    udp: false
+    tls: true
+    network: tcp
+    flow: xtls-rprx-direct
+    servername: us.haodigtal.one # priority over wss host
+    skip-cert-verify: true         
   - name: "AZ-HK-ml"
     type: vmess
     server: hk.haodigtal.one
@@ -82,6 +93,7 @@ proxy-groups:
     proxies:
       - AZ-HK
       - hysteria
+      - digital-SP
       - AZ-JP  
       - aws-SP
       - AZ-HK-ml
