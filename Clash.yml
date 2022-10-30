@@ -54,7 +54,7 @@ proxies:
     flow: xtls-rprx-direct
     servername: jp.haodigtal.one # priority over wss host
     skip-cert-verify: true 
-  - name: "digital-"
+  - name: "digital-US"
     type: vless
     server: uss.haodigtal.xyz
     port: 443
