@@ -3,13 +3,17 @@ dns:
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
   default-nameserver:          #解析非IP的dns用的dns服务器,只支持纯IP
-    - 223.6.6.6
     - 8.8.8.8
+    - 223.5.5.5
   enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
   nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
     - 223.6.6.6
     - https://doh.pub/dns-query
+  fallback:
+  - https://cloudflare-dns.com/dns-query
+  - tls://1.0.0.1:853
+  - https://dns.google/dns-query#
 ipv6: false 
 proxies:
   - name: "AZ-HK"
@@ -50,26 +54,29 @@ proxies:
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
     udp: false
     tls: true
-    network: tcp
-    flow: xtls-rprx-direct
+    network: ws
+    #flow: xtls-rprx-direct
     servername: jp.haodigtal.one # priority over wss host
-    skip-cert-verify: false
+    #skip-cert-verify: true //
+    ws-opts:
+      path: "/ws"
+      headers:
+        Host: a.189.cn
 
   - name: "digital-US"
-    type: vless
+    type: trojan
     server: uss.haodigtal.xyz
     port: 443
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
-    udp: false
-    tls: true
-    network: tcp
-    flow: xtls-rprx-direct
-    servername: uss.haodigtal.xyz # priority over wss host
-    skip-cert-verify: false
-            
+    password: haoyue123123
+    # udp: true
+    # sni: example.com # aka server name
+    # alpn:
+    #   - h2
+    #   - http/1.1
+    # skip-cert-verify: true
   - name: "AZ-HK-ml"
     type: vmess
-    server: 20.205.11.37
+    server: hk.haodigtal.one
     port: 8080
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
