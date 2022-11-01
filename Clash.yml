@@ -27,9 +27,9 @@ sniffer:
     
   port-whitelist:
     - 443
-    
-dns:
 
+dns:
+    
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
   default-nameserver: 
@@ -39,11 +39,11 @@ dns:
   enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
   nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - https://doh.pub/dns-query
+  - https://doh.pub/dns-query
   fallback:
   - https://cloudflare-dns.com/dns-query
   - tls://1.0.0.1:853
-  - https://dns.google/dns-query#
+  - https://dns.google/dns-query
 
 
 
