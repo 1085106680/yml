@@ -10,9 +10,7 @@ profile:                   #缓存设置(文件位置./cache.db)
   store-fake-ip: true      #fake-ip缓存 
 mode: rule 
 
-
-dns:
-  sniffer:
+sniffer:
   enable: true
   sniffing:
     - tls
@@ -30,6 +28,8 @@ dns:
   port-whitelist:
     - 443
     
+dns:
+
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
   default-nameserver: 
