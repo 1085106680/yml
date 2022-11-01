@@ -264,6 +264,8 @@ rules:
  - GEOSITE,youtube,PROXY
  - GEOSITE,geolocation-cn,DIRECT
  - GEOSITE,geolocation-!cn,PROXY
+ - GEOIP,telegram,PROXY,no-resolve
+ - GEOIP,private,DIRECT,no-resolve
  - GEOIP,cn,DIRECT
  - MATCH,auto
 
