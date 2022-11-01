@@ -1,20 +1,34 @@
-mode: rule  
+mixed-port: 7890
+tcp-concurrent: true  
+allow-lan: false                  #允许局域网连接(false/true)
+bind-address:                     #监听IP白名单（当allow-lan：true），只允许列表设备
+  '*'    
+log-level: info
+ipv6: false 
+profile:                   #缓存设置(文件位置./cache.db)
+  store-selected: false    #节点状态记忆（若不同配置有同代理名称,设置值共享）
+  store-fake-ip: true      #fake-ip缓存 
+mode: rule 
+
+
 dns:
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
-  default-nameserver:          #解析非IP的dns用的dns服务器,只支持纯IP
+  default-nameserver: 
+    - 223.5.5.5         #解析非IP的dns用的dns服务器,只支持纯IP
     - 8.8.8.8
-    - 223.5.5.5
+    
   enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
   nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
-    - 223.6.6.6
     - https://doh.pub/dns-query
   fallback:
   - https://cloudflare-dns.com/dns-query
   - tls://1.0.0.1:853
   - https://dns.google/dns-query#
-ipv6: false 
+
+
+
 proxies:
   - name: "AZ-HK"
     type: trojan
@@ -63,7 +77,7 @@ proxies:
   - name: "AZ-HK-ml"
     type: vmess
     server: hk.haodigtal.one
-    port: 8080
+    port: 80
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
     cipher: auto
@@ -91,32 +105,50 @@ proxy-groups:
       - aws-SP
       - hysteria
       - AZ-HK-ml
+
   - name: 🎥 Netflix
     type: select
     proxies:
       - PROXY
       - DIRECT
+
   - name: 🎥 disney+
     type: select
     proxies:
       - AZ-JP
       - PROXY
       - DIRECT
+
   - name: bilibili
     type: select
     proxies:
-      - PROXY
       - DIRECT
+      - PROXY
+
   - name: 🎮 游戏平台
     type: select
     proxies:
       - PROXY
       - DIRECT
+
   - name: 🚀 Steam 商店加速
     type: select
     proxies:
       - PROXY
       - DIRECT
+      
+  - name: "auto"
+    type: url-test
+    proxies:
+      - AZ-HK
+      - digital-US
+      - AZ-JP  
+      - aws-SP
+      - AZ-HK-ml
+    # tolerance: 150
+    # lazy: true
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
 
 
 rules:
@@ -232,6 +264,7 @@ rules:
  - GEOSITE,youtube,PROXY
  - GEOSITE,geolocation-cn,DIRECT
  - GEOSITE,geolocation-!cn,PROXY
- - MATCH,PROXY
+ - GEOIP,cn,DIRECT
+ - MATCH,auto
 
  
