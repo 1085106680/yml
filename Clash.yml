@@ -33,17 +33,20 @@ dns:
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
   default-nameserver: 
-    - 223.5.5.5         #解析非IP的dns用的dns服务器,只支持纯IP
+    - 223.5.5.5
+    - 114.114.114.114         #解析非IP的dns用的dns服务器,只支持纯IP
     - 8.8.8.8
     
   enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
-  nameserver:                        #默认DNS服务器，支持udp/tcp/dot/doh/doq
+  nameserver:  
+  - 223.5.5.5
+  - 119.29.29.29                      #默认DNS服务器，支持udp/tcp/dot/doh/doq
   - https://doh.pub/dns-query
   fallback:
-  - https://cloudflare-dns.com/dns-query
+  - tls://dns.google:853
   - tls://1.0.0.1:853
-  - https://dns.google/dns-query
+
 
 
 
@@ -55,10 +58,14 @@ proxies:
     password: haoyue123123
 
   - name: "AZ-JP"
-    type: trojan
+    type: vless
     server: jp.haodigtal.one
     port: 443
-    password: haoyue123123
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
+    network: tcp
+    servername: jp.haodigtal.one # AKA SNI
+    flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
+    # skip-cert-verify: true
   
 
   - name: "hysteria"
@@ -81,17 +88,17 @@ proxies:
     #disable_mtu_discovery: false
 
 
-  - name: "digital-US"
-    type: trojan
+  
+  - name: "digtal-US"
+    type: vless
     server: uss.haodigtal.xyz
     port: 443
-    password: haoyue123123
-    # udp: true
-    # sni: example.com # aka server name
-    # alpn:
-    #   - h2
-    #   - http/1.1
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
+    network: tcp
+    servername: uss.haodigtal.xyz # AKA SNI
+    flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
     # skip-cert-verify: true
+
   - name: "AZ-HK-ml"
     type: vmess
     server: hk.haodigtal.one
@@ -118,7 +125,7 @@ proxy-groups:
     type: select
     proxies:
       - AZ-HK
-      - digital-US
+      - digtal-US
       - AZ-JP  
       - aws-SP
       - hysteria
@@ -159,7 +166,7 @@ proxy-groups:
     type: url-test
     proxies:
       - AZ-HK
-      - digital-US
+      - digtal-US
       - AZ-JP  
       - aws-SP
       - AZ-HK-ml
