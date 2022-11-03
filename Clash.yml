@@ -134,6 +134,7 @@ proxy-groups:
   - name: 🎥 Netflix
     type: select
     proxies:
+      - AZ-JP
       - PROXY
       - DIRECT
 
