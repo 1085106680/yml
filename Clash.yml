@@ -91,11 +91,11 @@ proxies:
   
   - name: "digtal-US"
     type: vless
-    server: uss.haodigtal.xyz
+    server: us.haodigtal.xyz
     port: 443
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
     network: tcp
-    servername: uss.haodigtal.xyz # AKA SNI
+    servername: us.haodigtal.xyz # AKA SNI
     flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
     # skip-cert-verify: true
 
