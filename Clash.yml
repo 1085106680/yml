@@ -35,7 +35,7 @@ dns:
   default-nameserver: 
     - 223.5.5.5
     - 114.114.114.114         #解析非IP的dns用的dns服务器,只支持纯IP
-    - 8.8.8.8
+    #- 8.8.8.8
     
   enhanced-mode: redir-host
   fake-ip-range: 198.18.0.1/16
