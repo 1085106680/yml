@@ -53,7 +53,7 @@ dns:
 proxies:
   - name: "AZ-HK"
     type: trojan
-    server: hk.haodigtal.one
+    server: hk.haodigtal.xyz
     port: 443
     password: haoyue123123
 
