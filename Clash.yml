@@ -101,8 +101,8 @@ proxies:
 
   - name: "AZ-HK-ml"
     type: vmess
-    server: hk.haodigtal.one
-    port: 80
+    server: hk.haodigtal.xyz
+    port: 6666
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
     cipher: auto
@@ -110,13 +110,7 @@ proxies:
     # tls: true
     # skip-cert-verify: true
     # servername: example.com # priority over wss host
-    network: ws
-    ws-opts:
-       path: /
-       headers:
-         Host: a.189.cn
-    #   max-early-data: 2048
-    #   early-data-header-name: Sec-WebSocket-Protocol
+    network: http
   
   - { name: aws-SP, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
 
@@ -125,7 +119,6 @@ proxy-groups:
     type: select
     proxies:
       - AZ-HK
-      - digtal-US
       - AZ-JP  
       - aws-SP
       - AZ-HK-ml
