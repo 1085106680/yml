@@ -74,14 +74,13 @@ proxy-groups:
   - name: 🎥 disney+
     type: select
     proxies:
-      - AZ-JP
       - PROXY
       - DIRECT
   - name: bilibili
     type: select
     proxies:
-      - PROXY
       - DIRECT
+      - PROXY
   - name: 🎮 游戏平台
     type: select
     proxies:
