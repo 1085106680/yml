@@ -54,7 +54,7 @@ proxies:
   - name: "AZ-HK"
     type: trojan
     server: hk.haodigtal.one
-    port: 443
+    port: 20000
     password: haoyue123123
 
   - name: "AZ-JP"
