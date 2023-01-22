@@ -14,7 +14,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-  - name: "AZ-HK"
+  - name: "Hostyun-HK"
     type: trojan
     server: hk.haodigtal.one
     port: 20000
@@ -73,7 +73,7 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - AZ-HK
+      - Hostyun-HK
       - AZ-HK-ml
   - name: 🎥 Netflix
     type: select
