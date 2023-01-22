@@ -22,10 +22,10 @@ proxies:
     network: ws
     # skip-cert-verify: true
     udp: true
-    ws-opts:
-    path: /ws
-      headers:
-      Host: qq.com
+    #ws-opts:
+    #path: /ws
+    #  headers:
+    #  Host: qq.com
 
   - name: "AZ-JP"
     type: trojan
