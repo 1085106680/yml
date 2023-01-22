@@ -19,12 +19,21 @@ proxies:
     server: hk.haodigtal.one
     port: 20000
     password: haoyue123123
+    network: ws
+    # skip-cert-verify: true
+    udp: true
+    ws-opts:
+    path: /ws
+     headers:
+     Host: qq.com
 
   - name: "AZ-JP"
     type: trojan
     server: jp.haodigtal.one
     port: 443
     password: haoyue123123
+    
+
   
 
 

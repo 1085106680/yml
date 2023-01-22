@@ -51,11 +51,17 @@ dns:
 
 
 proxies:
-  - name: "AZ-HK"
+  - name: "Hostyun-HK"
     type: trojan
     server: hk.haodigtal.one
     port: 20000
     password: haoyue123123
+    network: ws
+    udp: true
+    ws-opts:
+       path: /ws
+       headers:
+         Host: qq.com
 
   - name: "AZ-JP"
     type: vless
@@ -123,14 +129,12 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - AZ-HK
-      - AZ-JP  
+      - AZ-HK 
       - AZ-HK-ml
 
   - name: 🎥 Netflix
     type: select
     proxies:
-      - AZ-JP
       - PROXY
       - DIRECT
 
