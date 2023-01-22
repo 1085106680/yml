@@ -24,8 +24,8 @@ proxies:
     udp: true
     ws-opts:
     path: /ws
-     headers:
-     Host: qq.com
+      headers:
+      Host: qq.com
 
   - name: "AZ-JP"
     type: trojan

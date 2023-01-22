@@ -58,10 +58,10 @@ proxies:
     password: haoyue123123
     network: ws
     udp: true
-    ws-opts:
-       path: /ws
-       headers:
-         Host: qq.com
+    #ws-opts:
+    #   path: /ws
+    #   headers:
+    #     Host: qq.com
 
   - name: "AZ-JP"
     type: vless
@@ -141,7 +141,6 @@ proxy-groups:
   - name: 🎥 disney+
     type: select
     proxies:
-      - AZ-JP
       - PROXY
       - DIRECT
 
