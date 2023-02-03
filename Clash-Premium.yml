@@ -22,20 +22,11 @@ proxies:
     network: ws
     # skip-cert-verify: true
     udp: true
-    #ws-opts:
-    #path: /ws
-    #  headers:
-    #  Host: qq.com
-
-  - name: "AZ-JP"
-    type: trojan
-    server: jp.haodigtal.one
-    port: 443
-    password: haoyue123123
+    ws-opts:
+       path: /ws
+       headers:
+        Host: qq.com
     
-
-  
-
 
   - name: "digital-US"
     type: trojan
@@ -74,7 +65,6 @@ proxy-groups:
     type: select
     proxies:
       - Hostyun-HK
-      - AZ-HK-ml
   - name: 🎥 Netflix
     type: select
     proxies:
