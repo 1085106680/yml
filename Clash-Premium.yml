@@ -19,13 +19,13 @@ proxies:
     server: hk.haodigtal.one
     port: 20000
     password: haoyue123123
-    network: ws
+    network: tcp
     # skip-cert-verify: true
     udp: true
-    ws-opts:
-       path: /ws
-       headers:
-        Host: qq.com
+    #ws-opts:
+    #   path: /ws
+    #   headers:
+     #   Host: qq.com
     
 
   - name: "digital-US"
