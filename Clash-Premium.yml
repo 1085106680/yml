@@ -17,7 +17,7 @@ proxies:
   - name: "Hostyun-HK"
     type: trojan
     server: hk.haodigtal.one
-    port: 20000
+    port: 20001
     password: haoyue123123
     network: tcp
     # skip-cert-verify: true
