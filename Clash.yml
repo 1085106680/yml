@@ -80,7 +80,7 @@ proxies:
 
   - name: "OpenAi-warp"
     type: vmess
-    server: 178.128.221.76
+    server: 164.92.150.188
     port: 8080
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
