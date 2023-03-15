@@ -110,10 +110,10 @@ proxies:
     flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
     # skip-cert-verify: true
 
-  - name: "AZ-HK-ml"
+  - name: "OpenAi-warp"
     type: vmess
-    server: hk.haodigtal.xyz
-    port: 6666
+    server: 178.128.221.76
+    port: 8080
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
     cipher: auto
@@ -121,7 +121,7 @@ proxies:
     # tls: true
     # skip-cert-verify: true
     # servername: example.com # priority over wss host
-    network: http
+    network: ws
   
   - { name: aws-SP, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
 
@@ -130,7 +130,7 @@ proxy-groups:
     type: select
     proxies:
       - Hostyun-HK
-      - AZ-HK-ml
+      - OpenAi-warp
 
   - name: 🎥 Netflix
     type: select
