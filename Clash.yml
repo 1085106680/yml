@@ -63,52 +63,20 @@ proxies:
     #  headers:
     #   Host: qq.com
 
-  - name: "AZ-JP"
-    type: vless
-    server: jp.haodigtal.one
-    port: 443
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
-    tls: true
-    network: ws
-    servername: jp.haodigtal.one 
-    ws-opts:
-      path: "/ws"
-    #  headers:
-    #   Host: 
-    # flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
-    # skip-cert-verify: true
-  
-
-  - name: "hysteria"
-    type: hysteria
-    server: hk.haodigtal.one
-    port: 6666
-    #auth_str: haoyue123123
-    obfs: haoyue123123
-    #alpn: h3
-    protocol: udp          #支持udp/wechat-video/faketcp
-    up: '500 Mbps'          #若不写单位，默认为Mbps
-    down: '500 Mbps'       #若不写单位，默认为Mbps
-    #sni: server.com
-    #skip-cert-verify: false
-    #recv_window_conn: 12582912
-    #recv_window: 52428800
-    #auth_str: "yubiyubi"
-    #ca: "./my.ca"
-    #ca_str: "xyz"
-    #disable_mtu_discovery: false
-
-
-  
-  - name: "digtal-US"
-    type: vless
-    server: us.haodigtal.xyz
-    port: 443
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
+  - name: "HKs"
+    type: trojan
+    server: hks.haodigtal.one
+    port: 20001
+    password: haoyue123123
     network: tcp
-    servername: us.haodigtal.xyz # AKA SNI
-    flow: xtls-rprx-direct # xtls-rprx-origin  # enable XTLS
-    # skip-cert-verify: true
+    udp: true
+   # ws-opts:
+   #   path: "/ws"
+    #  headers:
+    #   Host: qq.com
+
+
+  
 
   - name: "OpenAi-warp"
     type: vmess
@@ -130,6 +98,7 @@ proxy-groups:
     type: select
     proxies:
       - Hostyun-HK
+      - HKs
       - OpenAi-warp
 
   - name: 🎥 Netflix
