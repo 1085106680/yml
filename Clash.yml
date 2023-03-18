@@ -89,7 +89,7 @@ proxies:
     # tls: true
     # skip-cert-verify: true
     # servername: example.com # priority over wss host
-    network: ws
+    network: tcp
   
   - { name: aws-SP, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
 

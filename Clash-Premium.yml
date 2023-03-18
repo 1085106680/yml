@@ -39,7 +39,7 @@ proxies:
     # tls: true
     # skip-cert-verify: true
     # servername: example.com # priority over wss host
-    network: ws
+    network: tcp
   
 proxy-groups:
   - name: PROXY
