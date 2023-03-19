@@ -22,12 +22,9 @@ proxies:
     network: tcp
     # skip-cert-verify: true
     udp: true
-    #ws-opts:
-    #   path: /ws
-    #   headers:
-     #   Host: qq.com
+
     
-- name: "HKs"
+  - name: "HKs"
     type: trojan
     server: hks.haodigtal.one
     port: 20001
@@ -35,10 +32,7 @@ proxies:
     network: tcp
     # skip-cert-verify: true
     udp: true
-    #ws-opts:
-    #   path: /ws
-    #   headers:
-     #   Host: qq.com
+
 
   - name: "OpenAi-warp"
     type: vmess
