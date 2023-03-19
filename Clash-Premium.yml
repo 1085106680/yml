@@ -27,6 +27,18 @@ proxies:
     #   headers:
      #   Host: qq.com
     
+- name: "HKs"
+    type: trojan
+    server: hks.haodigtal.one
+    port: 20001
+    password: haoyue123123
+    network: tcp
+    # skip-cert-verify: true
+    udp: true
+    #ws-opts:
+    #   path: /ws
+    #   headers:
+     #   Host: qq.com
 
   - name: "OpenAi-warp"
     type: vmess
@@ -46,6 +58,7 @@ proxy-groups:
     type: select
     proxies:
       - Hostyun-HK
+      - HKs
       - OpenAi-warp
   - name: 🎥 Netflix
     type: select
