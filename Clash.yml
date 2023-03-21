@@ -51,17 +51,6 @@ dns:
 
 
 proxies:
-  - name: "Hostyun-HK"
-    type: trojan
-    server: hk.haodigtal.one
-    port: 20001
-    password: haoyue123123
-    network: tcp
-    udp: true
-   # ws-opts:
-   #   path: "/ws"
-    #  headers:
-    #   Host: qq.com
 
   - name: "HKs"
     type: trojan
@@ -97,7 +86,6 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - Hostyun-HK
       - HKs
       - OpenAi-warp
 
