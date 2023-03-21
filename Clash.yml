@@ -64,30 +64,21 @@ proxies:
     #  headers:
     #   Host: qq.com
 
-
-  
-
-  - name: "OpenAi-warp"
-    type: vmess
-    server: 164.92.150.188
-    port: 8080
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
-    alterId: 0
-    cipher: auto
-    udp: true
-    # tls: true
-    # skip-cert-verify: true
-    # servername: example.com # priority over wss host
+  - name: "US"
+    type: trojan
+    server: us.haodigtal.one
+    port: 20001
+    password: haoyue123123
     network: tcp
+    udp: true
   
-  - { name: aws-SP, type: vmess, server: xjp.easygoml.net, port: '80', uuid: ddcc587f-9292-4cd0-a62e-dddf6f52b4f3, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: / }, ws-path: / }
 
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
       - HKs
-      - OpenAi-warp
+      - US
 
   - name: 🎥 Netflix
     type: select
