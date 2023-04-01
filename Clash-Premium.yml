@@ -171,6 +171,8 @@ rule-providers:
 
 rules:
  - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
+ - DOMAIN-SUFFIX,googleapis.cn,PROXY
+ - DOMAIN-SUFFIX,googleapis.com,PROXY
  - DOMAIN-SUFFIX,github.com,PROXY
  - DOMAIN-SUFFIX,bilibili.com,bilibili
  - DOMAIN-SUFFIX,bilibili.net,bilibili
