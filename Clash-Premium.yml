@@ -67,7 +67,7 @@ proxy-groups:
     proxies:
       - PROXY
       - DIRECT
-      
+
   - name: 📢 谷歌FCM
     type: select
     proxies:
@@ -308,6 +308,7 @@ rules:
  - IP-CIDR,173.194.175.188/32,📢 谷歌FCM,no-resolve
  - IP-CIDR,173.194.218.188/32,📢 谷歌FCM,no-resolve
  - IP-CIDR,209.85.233.188/32,📢 谷歌FCM,no-resolve
+ - DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
  - RULE-SET,applications,DIRECT
  - DOMAIN,clash.razord.top,DIRECT
  - DOMAIN,yacd.haishan.me,DIRECT
