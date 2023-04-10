@@ -55,7 +55,7 @@ proxies:
   - name: "HKs"
     type: trojan
     server: hks.haodigtal.one
-    port: 20001
+    port: 20000
     password: haoyue123123
     network: tcp
     udp: true
