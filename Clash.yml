@@ -54,8 +54,8 @@ proxies:
 
   - name: "HKs"
     type: trojan
-    server: hks.haodigtal.one
-    port: 443
+    server: uss.haodigtal.one
+    port: 20001
     password: haoyue123123
     network: tcp
     udp: true
