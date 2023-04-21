@@ -56,7 +56,7 @@ proxies:
 
   - name: "US"
     type: trojan
-    server: us.haodigtal.one
+    server: uss.haodigtal.one
     port: 20001
     password: haoyue123123
     network: tcp
