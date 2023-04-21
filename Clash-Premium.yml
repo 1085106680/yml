@@ -17,7 +17,7 @@ dns:
 
 proxies:
     
-  - name: "US-NY"
+  - name: "US"
     type: trojan
     server: uss.haodigtal.one
     port: 20001
@@ -26,7 +26,7 @@ proxies:
     # skip-cert-verify: true
     udp: true
 
-  - name: "US"
+  - name: "US1"
     type: trojan
     server: us.haodigtal.one
     port: 20001
@@ -40,7 +40,6 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - US-NY
       - US
   - name: 🎥 Netflix
     type: select
