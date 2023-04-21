@@ -4,19 +4,11 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
-proxies: 
-  - name: "HKs"
-    type: trojan
-    server: hks.haodigtal.one
-    port: 20001
-    password: haoyue123123
-    network: tcp
-    # skip-cert-verify: true
-    udp: true
 
+proxies: 
   - name: "US"
     type: trojan
-    server: us.haodigtal.one
+    server: uss.haodigtal.one
     port: 20001
     password: haoyue123123
     network: tcp
@@ -27,7 +19,6 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - HKs
       - US
       - DIRECT
 
