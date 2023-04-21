@@ -17,7 +17,7 @@ dns:
 
 proxies:
     
-  - name: "HKs"
+  - name: "US-NYs"
     type: trojan
     server: uss.haodigtal.one
     port: 20001
@@ -40,7 +40,7 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - HKs
+      - US-NY
       - US
   - name: 🎥 Netflix
     type: select
