@@ -52,17 +52,7 @@ dns:
 
 proxies:
 
-  - name: "US-NY"
-    type: trojan
-    server: uss.haodigtal.one
-    port: 20001
-    password: haoyue123123
-    network: tcp
-    udp: true
-   # ws-opts:
-   #   path: "/ws"
-    #  headers:
-    #   Host: qq.com
+
 
   - name: "US"
     type: trojan
@@ -71,14 +61,28 @@ proxies:
     password: haoyue123123
     network: tcp
     udp: true
-  
+
+  - { name: 'HK1-广电', type: ss, server: gd.ygdyf.com, port: 46147, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
+    - { name: 'HK 香港03解鎖Netflix Disney+BGP', type: ss, server: js.ygdyf.com, port: 33398, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
+    - { name: 'HK 香港03解鎖Netflix Disney+广移', type: ss, server: gy.ygdyf.com, port: 21800, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
+    - { name: 'HK 香港03解鎖Netflix Disney+广电', type: ss, server: gd.ygdyf.com, port: 36970, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
+    - { name: 'JP 日本02-江苏BGP', type: ss, server: js.ygdyf.com, port: 33643, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
+    - { name: 'JP 日本02-广移', type: ss, server: gy.ygdyf.com, port: 23740, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
+    - { name: 'JP 日本02-广电', type: ss, server: gd.ygdyf.com, port: 44630, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
 
 proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - US-NY
       - US
+      - HK1-广电
+      - HK 香港03解鎖Netflix Disney+BGP
+      - HK 香港03解鎖Netflix Disney+广移
+      - HK 香港03解鎖Netflix Disney+广电
+      - JP 日本02-江苏BGP
+      - JP 日本02-广电
+
+
 
   - name: 🎥 Netflix
     type: select
