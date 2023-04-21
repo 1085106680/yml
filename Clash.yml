@@ -76,6 +76,11 @@ proxy-groups:
       - 'US'
       - 'HK1-广电'
       - 'HK 香港03解鎖Netflix Disney+BGP'
+      - 'HK 香港03解鎖Netflix Disney+广移'
+      - 'HK 香港03解鎖Netflix Disney+广电'
+      - 'JP 日本02-江苏BGP'
+      - 'JP 日本02-广移'
+      - 'JP 日本02-广电'
 
 
 
