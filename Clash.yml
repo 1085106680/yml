@@ -56,6 +56,14 @@ proxies:
 
   - name: "US"
     type: trojan
+    server: us.haodigtal.one
+    port: 20001
+    password: haoyue123123
+    network: tcp
+    udp: true
+
+  - name: "US-NY"
+    type: trojan
     server: uss.haodigtal.one
     port: 20001
     password: haoyue123123
@@ -74,6 +82,7 @@ proxy-groups:
     type: select
     proxies:
       - 'US'
+      - 'US-NY'
       - 'HK1-广电'
       - 'HK 香港03解鎖Netflix Disney+BGP'
       - 'HK 香港03解鎖Netflix Disney+广移'
