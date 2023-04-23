@@ -59,8 +59,13 @@ proxies:
     server: us.haodigtal.one
     port: 20001
     password: haoyue123123
-    network: tcp
+    network: grpc
+    sni: us.haodigtal.one
     udp: true
+    alpn:
+      - h2
+    grpc-opts:
+      grpc-service-name: "us.haodigtal.one"
 
   - name: "US-NY"
     type: trojan
