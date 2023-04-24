@@ -30,6 +30,14 @@ proxies:
     grpc-opts:
       grpc-service-name: "us.haodigtal.one"
 
+   - name: "us-vmess"
+    type: vmess
+    server: uss.haodigtal.one
+    port: 8888
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
+    alterId: 0
+    cipher: auto
+    network: ws
 
 
 
@@ -50,6 +58,7 @@ proxy-groups:
     proxies:
       - 'US'
       - 'US-NY'
+      - 'us-vmess'
       - 'HK 香港03解鎖Netflix Disney+BGP'
       - 'HK 香港03解鎖Netflix Disney+广移'
       - 'HK 香港03解鎖Netflix Disney+广电'

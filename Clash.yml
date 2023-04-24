@@ -75,12 +75,14 @@ proxies:
     password: 6ppyOoR3wVgu3l54ZKSmaA==
     udp: true
 
-  - name: "ss-libev"
-    type: ss
-    server: 157.230.220.63
+  - name: "us-vmess"
+    type: vmess
+    server: uss.haodigtal.one
     port: 8888
-    cipher: chacha20-ietf-poly1305
-    password: "haoyue123123!!"
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
+    alterId: 0
+    cipher: auto
+    network: ws
 
   - { name: 'HK 香港03解鎖Netflix Disney+BGP', type: ss, server: js.ygdyf.com, port: 33398, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
   - { name: 'HK 香港03解鎖Netflix Disney+广移', type: ss, server: gy.ygdyf.com, port: 21800, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
@@ -91,7 +93,7 @@ proxy-groups:
     proxies:
       - 'US'
       - 'US-NY'
-      - 'ss-libev'
+      - 'us-vmess'
       - 'HK 香港03解鎖Netflix Disney+BGP'
       - 'HK 香港03解鎖Netflix Disney+广移'
       - 'HK 香港03解鎖Netflix Disney+广电'
