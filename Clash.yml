@@ -68,7 +68,7 @@ proxies:
       grpc-service-name: "us.haodigtal.one"
 
   - name: "US-ss"
-     type: ss
+    type: ss
     server: uss.haodigtal.one
     port: 8888
     cipher: chacha20-ietf-poly1305
