@@ -67,12 +67,12 @@ proxies:
     grpc-opts:
       grpc-service-name: "us.haodigtal.one"
 
-  - name: "US-NY"
-    type: ss
+  - name: "US-ss"
+     type: ss
     server: uss.haodigtal.one
-    port: 20001
-    cipher: 2022-blake3-aes-128-gcm
-    password: 6ppyOoR3wVgu3l54ZKSmaA==
+    port: 8888
+    cipher: chacha20-ietf-poly1305
+    password: "haoyue123123!!"
     udp: true
 
   - name: "us-vless"
@@ -94,7 +94,7 @@ proxy-groups:
     type: select
     proxies:
       - 'US'
-      - 'US-NY'
+      - 'US-ss'
       - 'us-vless'
       - 'HK 香港03解鎖Netflix Disney+BGP'
       - 'HK 香港03解鎖Netflix Disney+广移'
