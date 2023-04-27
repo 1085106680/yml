@@ -101,6 +101,11 @@ proxy-groups:
       - 'HK 香港03解鎖Netflix Disney+广电'
 
 
+  - name: bilibili
+    type: select
+    proxies:
+      - DIRECT
+      - PROXY
 
 
   - name: 🎥 Netflix
@@ -114,29 +119,19 @@ proxy-groups:
     proxies:
       - PROXY
       - DIRECT
-
-  - name: bilibili
-    type: select
-    proxies:
-      - DIRECT
-      - PROXY
-
-  - name: 🎮 游戏平台
+      
+  - name: 🐟 漏网之鱼
     type: select
     proxies:
       - PROXY
       - DIRECT
+    
+  
 
-  - name: 🚀 Steam 商店加速
-    type: select
-    proxies:
-      - PROXY
-      - DIRECT
       
 
 
 rules:
- - DOMAIN-SUFFIX,github.com,PROXY
  - DOMAIN-SUFFIX,bilibili.com,bilibili
  - DOMAIN-SUFFIX,bilibili.net,bilibili
  - DOMAIN-SUFFIX,bilibili.cn,bilibili
@@ -181,43 +176,6 @@ rules:
  - IP-CIDR,198.45.48.0/20,🎥 Netflix,no-resolve
  - IP-CIDR,207.45.72.0/22,🎥 Netflix,no-resolve
  - IP-CIDR,208.75.76.0/22,🎥 Netflix,no-resolve
- - DOMAIN-SUFFIX,steamcommunity.com,🚀 Steam 商店加速
- - DOMAIN-SUFFIX,ol.epicgames.com,🎮 游戏平台
- - DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台
- - DOMAIN-SUFFIX,helpshift.com,🎮 游戏平台
- - DOMAIN-SUFFIX,paragon.com,🎮 游戏平台
- - DOMAIN-SUFFIX,unrealengine.com,🎮 游戏平台
- - DOMAIN-SUFFIX,fanatical.com,🎮 游戏平台
- - DOMAIN-SUFFIX,humblebundle.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steam-chat.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steampowered.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steamstatic.com,🎮 游戏平台
- - DOMAIN-SUFFIX,csgo.wmsj.cn,🎮 游戏平台
- - DOMAIN-SUFFIX,dl.steam.ksyna.com,🎮 游戏平台
- - DOMAIN-SUFFIX,dota2.wmsj.cn,🎮 游戏平台
- - DOMAIN-SUFFIX,st.dl.bscstorage.net,🎮 游戏平台
- - DOMAIN-SUFFIX,st.dl.eccdnx.com,🎮 游戏平台
- - DOMAIN-SUFFIX,st.dl.pinyuncloud.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,🎮 游戏平台
- - DOMAIN-SUFFIX,steamcontent.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steamgames.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steampowered.com.8686c.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steamstat.us,🎮 游戏平台
- - DOMAIN-SUFFIX,steamstatic.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steamusercontent.com,🎮 游戏平台
- - DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net,🎮 游戏平台
- - DOMAIN,a.rsg.sc,🎮 游戏平台
- - DOMAIN,media-rockstargames-com.akamaized.net,🎮 游戏平台
- - DOMAIN,rockstarsupport.goquiq.com,🎮 游戏平台
- - DOMAIN,static.quiq-cdn.com,🎮 游戏平台
- - DOMAIN-SUFFIX,recaptcha.net,🎮 游戏平台
- - DOMAIN-SUFFIX,rockstargames.com,🎮 游戏平台
- - DOMAIN-SUFFIX,playstation.com,🎮 游戏平台
- - DOMAIN-SUFFIX,playstationnetwork.com,🎮 游戏平台
- - DOMAIN-SUFFIX,sony.com,🎮 游戏平台
- - DOMAIN-SUFFIX,sonyentertainmentnetwork.com,🎮 游戏平台
- - DOMAIN-SUFFIX,measurement.com,🎮 游戏平台
- - DOMAIN-SUFFIX,nintendo.com,🎮 游戏平台
  - DOMAIN-SUFFIX,disneyplus.com,🎥 disney+
  - DOMAIN-SUFFIX,disco-api.com,🎥 disney+
  - DOMAIN-SUFFIX,discovery.com,🎥 disney+
@@ -251,6 +209,6 @@ rules:
  - GEOIP,telegram,PROXY,no-resolve
  - GEOIP,private,DIRECT,no-resolve
  - GEOIP,cn,DIRECT
- - MATCH,PROXY
+ - MATCH,🐟 漏网之鱼
 
  
