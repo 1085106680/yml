@@ -93,8 +93,7 @@ proxy-groups:
     type: select
     proxies:
       - 'US'
-      - 'US-ss'
-      - 'us-vless'
+      - 'US-trojan'
       - 'HK 香港03解鎖Netflix Disney+BGP'
       - 'HK 香港03解鎖Netflix Disney+广移'
       - 'HK 香港03解鎖Netflix Disney+广电'
