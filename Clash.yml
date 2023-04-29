@@ -59,21 +59,20 @@ proxies:
     server: us.haodigtal.one
     port: 20001
     password: haoyue123123
-    network: grpc
-    sni: us.haodigtal.one
-    udp: true
-    alpn:
-      - h2
-    grpc-opts:
-      grpc-service-name: "us.haodigtal.one"
+    #network: grpc
+    #sni: us.haodigtal.one
+    #udp: true
+    #alpn:
+    #  - h2
+    #grpc-opts:
+    #  grpc-service-name: "us.haodigtal.one"
 
-  - name: "US-ss"
-    type: ss
-    server: uss.haodigtal.one
-    port: 8888
-    cipher: chacha20-ietf-poly1305
-    password: "haoyue123123!!"
-    udp: true
+  - name: "US-trojan"
+    type: trojan
+    server: uss.haodigtal.one 
+    port: 20001 
+    password: haoyue123123
+
 
   - name: "us-vless"
     type: vless
