@@ -4,7 +4,7 @@ allow-lan: false                  #允许局域网连接(false/true)
 bind-address:                     #监听IP白名单（当allow-lan：true），只允许列表设备
   '*'    
 log-level: info
-ipv6: false 
+ipv6: true
 profile:                   #缓存设置(文件位置./cache.db)
   store-selected: true  #节点状态记忆（若不同配置有同代理名称,设置值共享）
   store-fake-ip: false      #fake-ip缓存 
@@ -32,15 +32,12 @@ dns:
     
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:53
-  default-nameserver: 
-    - 223.5.5.5
-    - 114.114.114.114         #解析非IP的dns用的dns服务器,只支持纯IP
-    - 8.8.8.8
-    
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:  
   - 223.5.5.5
+  - udp://[2400:3200::1]:53
   - 119.29.29.29                      #默认DNS服务器，支持udp/tcp/dot/doh/doq
   - https://doh.pub/dns-query
   fallback:
@@ -54,10 +51,10 @@ proxies:
 
 
 
-  - name: "US"
+  - name: "US-ipv6"
     type: trojan
-    server: us.haodigtal.one
-    port: 20001
+    server: us6.haodigtal.one
+    port: 20002
     password: haoyue123123
     #network: grpc
     #sni: us.haodigtal.one
@@ -66,8 +63,13 @@ proxies:
     #  - h2
     #grpc-opts:
     #  grpc-service-name: "us.haodigtal.one"
+  - name: "US"
+    type: trojan
+    server: us.haodigtal.one
+    port: 20001
+    password: haoyue123123
 
-  - name: "US-trojan"
+  - name: "US-2"
     type: trojan
     server: uss.haodigtal.one 
     port: 20001 
@@ -85,18 +87,13 @@ proxies:
     flow: xtls-rprx-vision
     client-fingerprint: chrome
 
-  - { name: 'HK 香港03解鎖Netflix Disney+BGP', type: ss, server: js.ygdyf.com, port: 33398, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
-  - { name: 'HK 香港03解鎖Netflix Disney+广移', type: ss, server: gy.ygdyf.com, port: 21800, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
-  - { name: 'HK 香港03解鎖Netflix Disney+广电', type: ss, server: gd.ygdyf.com, port: 36970, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
+      - 'US-ipv6'
       - 'US'
-      - 'US-trojan'
-      - 'HK 香港03解鎖Netflix Disney+BGP'
-      - 'HK 香港03解鎖Netflix Disney+广移'
-      - 'HK 香港03解鎖Netflix Disney+广电'
+      - 'US-2'
 
 
   - name: bilibili
