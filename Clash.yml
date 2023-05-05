@@ -37,7 +37,6 @@ dns:
   fake-ip-range: 198.18.0.1/16
   nameserver:  
   - 223.5.5.5
-  - udp://[2400:3200::1]:53
   - 119.29.29.29                      #默认DNS服务器，支持udp/tcp/dot/doh/doq
   - https://doh.pub/dns-query
   fallback:
@@ -63,6 +62,14 @@ proxies:
     #  - h2
     #grpc-opts:
     #  grpc-service-name: "us.haodigtal.one"
+    
+  - name: "US-ss-ipv6"
+    type: ss
+    server: us6.haodigtal.one
+    port: 20003
+    cipher: 2022-blake3-aes-128-gcm
+    password: "6ppyOoR3wVgu3l54ZKSmaA=="
+
   - name: "US"
     type: trojan
     server: us.haodigtal.one
@@ -91,7 +98,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'US-ipv6'
+      - 'US-ss-ipv6'
       - 'US'
       - 'US-2'
 
