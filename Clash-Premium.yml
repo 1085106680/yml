@@ -32,7 +32,7 @@ proxies:
     #grpc-opts:
     #  grpc-service-name: "us.haodigtal.one"
 
-  - name: "US-trojan"
+  - name: "US-2"
     type: trojan
     server: uss.haodigtal.one 
     port: 20001 
@@ -46,9 +46,6 @@ proxies:
     port: 8888
     cipher: chacha20-ietf-poly1305
     password: "haoyue123123!!"
-  - { name: 'HK 香港03解鎖Netflix Disney+BGP', type: ss, server: js.ygdyf.com, port: 33398, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
-  - { name: 'HK 香港03解鎖Netflix Disney+广移', type: ss, server: gy.ygdyf.com, port: 21800, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
-  - { name: 'HK 香港03解鎖Netflix Disney+广电', type: ss, server: gd.ygdyf.com, port: 36970, cipher: chacha20-ietf-poly1305, password: 24a9acb9-a3ee-4bbc-993a-e8d59c8dc658, udp: true }
 
 
 proxy-groups:
@@ -56,10 +53,8 @@ proxy-groups:
     type: select
     proxies:
       - 'US'
-      - 'US-trojan'
-      - 'HK 香港03解鎖Netflix Disney+BGP'
-      - 'HK 香港03解鎖Netflix Disney+广移'
-      - 'HK 香港03解鎖Netflix Disney+广电'
+      - 'US-2'
+
 
 
 
