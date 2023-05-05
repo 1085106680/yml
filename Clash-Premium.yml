@@ -24,6 +24,7 @@ proxies:
     server: us.haodigtal.one
     port: 20001
     password: haoyue123123
+    mux: true
     #network: grpc
     #sni: us.haodigtal.one
     #udp: true
@@ -37,6 +38,7 @@ proxies:
     server: uss.haodigtal.one 
     port: 20001 
     password: haoyue123123
+    mux: true
 
 
 
