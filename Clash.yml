@@ -49,20 +49,6 @@ dns:
 proxies:
 
 
-
-  - name: "US-ipv6"
-    type: trojan
-    server: us6.haodigtal.one
-    port: 20002
-    password: haoyue123123
-    #network: grpc
-    #sni: us.haodigtal.one
-    #udp: true
-    #alpn:
-    #  - h2
-    #grpc-opts:
-    #  grpc-service-name: "us.haodigtal.one"
-    
   - name: "US-ss-ipv6"
     type: ss
     server: us6.haodigtal.one
@@ -75,24 +61,15 @@ proxies:
     server: us.haodigtal.one
     port: 20001
     password: haoyue123123
+    mux: true
 
   - name: "US-2"
     type: trojan
     server: uss.haodigtal.one 
     port: 20001 
     password: haoyue123123
+    mux: true
 
-
-  - name: "us-vless"
-    type: vless
-    server: uss.haodigtal.one
-    port: 20000
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d4
-    network: tcp
-    tls: true
-    udp: false
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
 
 proxy-groups:
   - name: 🚀 节点选择
