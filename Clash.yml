@@ -61,14 +61,21 @@ proxies:
     server: us.haodigtal.one
     port: 20001
     password: haoyue123123
-    mux: true
+    sni: us.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
 
   - name: "US-2"
     type: trojan
     server: uss.haodigtal.one 
     port: 20001 
     password: haoyue123123
-    mux: true
+    sni: uss.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+
 
 
 proxy-groups:
