@@ -56,12 +56,32 @@ proxies:
     cipher: 2022-blake3-aes-128-gcm
     password: "6ppyOoR3wVgu3l54ZKSmaA=="
 
+  - name: "HK-BGP"
+    type: trojan
+    server: hk.haodigtal.one
+    port: 20001
+    password: haoyue123123
+    sni: hk.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+
   - name: "US"
     type: trojan
     server: us.haodigtal.one
     port: 20001
     password: haoyue123123
     sni: us.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+
+  - name: "JP"
+    type: trojan
+    server: jp.haodigtal.one
+    port: 20001
+    password: haoyue123123
+    sni: jp.haodigtal.one
     alpn:
        - h2
        - http/1.1
@@ -82,7 +102,8 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'US-ss-ipv6'
+      - 'HK-BGP'
+      - 'JP'
       - 'US'
       - 'US-2'
 
