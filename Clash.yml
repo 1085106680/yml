@@ -49,12 +49,12 @@ dns:
 proxies:
 
 
-  - name: "US-ss-ipv6"
+  - name: "JP"
     type: ss
-    server: us6.haodigtal.one
-    port: 20003
-    cipher: 2022-blake3-aes-128-gcm
-    password: "6ppyOoR3wVgu3l54ZKSmaA=="
+    server: jp.haodigtal.one
+    port: 20001
+    cipher: chacha20-ietf-poly1305
+    password: "####haoyue123123####"
 
   - name: "HK-BGP"
     type: trojan
@@ -76,25 +76,14 @@ proxies:
        - h2
        - http/1.1
 
-  - name: "JP"
-    type: trojan
-    server: jp.haodigtal.one
-    port: 20001
-    password: haoyue123123
-    sni: jp.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
+
 
   - name: "US-2"
-    type: trojan
-    server: uss.haodigtal.one 
-    port: 20001 
-    password: haoyue123123
-    sni: uss.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
+    type: ss
+    server: uss.haodigtal.one
+    port: 20001
+    cipher: chacha20-ietf-poly1305
+    password: "####haoyue123123####"
 
 
 

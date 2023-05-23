@@ -36,24 +36,19 @@ proxies:
     #  grpc-service-name: "us.haodigtal.one"
 
   - name: "US-2"
-    type: trojan
-    server: uss.haodigtal.one 
-    port: 20001 
-    password: haoyue123123
-    sni: uss.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
-
-
-
-
-  - name: "US-NY"
     type: ss
-    server: 157.230.220.63
-    port: 8888
+    server: uss.haodigtal.one
+    port: 20001
     cipher: chacha20-ietf-poly1305
-    password: "haoyue123123!!"
+    password: "####haoyue123123####"
+
+
+  - name: "JP"
+    type: ss
+    server: jp.haodigtal.one
+    port: 20001
+    cipher: chacha20-ietf-poly1305
+    password: "####haoyue123123####"
 
 
 proxy-groups:
@@ -62,6 +57,7 @@ proxy-groups:
     proxies:
       - 'US'
       - 'US-2'
+      - 'JP
 
 
 
