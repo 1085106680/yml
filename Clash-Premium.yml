@@ -57,7 +57,7 @@ proxy-groups:
     proxies:
       - 'US'
       - 'US-2'
-      - 'JP
+      - 'JP'
 
 
 
