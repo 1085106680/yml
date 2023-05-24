@@ -92,12 +92,13 @@ proxies:
     server: uss.haodigtal.one
     port: 443
     cipher: chacha20-ietf-poly1305
-    password: "####haoyue123123####"
+    password: "haoyue123123"
     plugin: v2ray-plugin
     plugin-opts:
       mode: websocket
       tls: true
       host: uss.haodigtal.one
+      path: "/ws"
 
 
 
