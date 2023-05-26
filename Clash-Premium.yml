@@ -18,6 +18,15 @@ dns:
      - tcp://1.1.1.1
 
 proxies:
+  - name: "NY-bing-ai"
+    type: trojan
+    server: ca.haodigtal.one
+    port: 443
+    password: haoyue123123
+    sni: ca.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
     
   - name: "US"
     type: trojan
@@ -67,6 +76,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
+      - 'NY-bing-ai'
       - 'US'
       - 'US-2'
       - 'JP'
