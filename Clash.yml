@@ -85,6 +85,26 @@ proxies:
        - h2
        - http/1.1
 
+  - name: "RU"
+    type: trojan
+    server: sb-gfw.haodigtal.one
+    port: 20001
+    password: haoyue123123
+    sni: sb-gfw.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+
+  - name: "NY-bing-ai"
+    type: trojan
+    server: ca.haodigtal.one
+    port: 443
+    password: haoyue123123
+    sni: ca.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+
 
 
   - name: "US-2"
@@ -108,6 +128,8 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
+      - 'NY-bing-ai'
+      - 'RU'
       - 'HK-BGP'
       - 'JP'
       - 'US'
