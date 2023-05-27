@@ -47,7 +47,7 @@ proxies:
   - name: "US-2"
     type: ss
     server: uss.haodigtal.one
-    port: 443
+    port: 20001
     cipher: chacha20-ietf-poly1305
     password: "haoyue123123"
     plugin: v2ray-plugin
