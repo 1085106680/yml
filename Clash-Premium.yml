@@ -27,6 +27,16 @@ proxies:
     alpn:
        - h2
        - http/1.1
+
+  - name: "HK-BGP"
+    type: trojan
+    server: hk.haodigtal.one
+    port: 20001
+    password: haoyue123123
+    sni: hk.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
     
   - name: "US"
     type: trojan
@@ -77,6 +87,7 @@ proxy-groups:
     type: select
     proxies:
       - 'NY-bing-ai'
+      - 'HK-BGP'
       - 'HK-s'
       - 'US'
       - 'US-2'

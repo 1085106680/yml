@@ -49,19 +49,6 @@ dns:
 proxies:
 
 
-  - name: "JP"
-    type: ss
-    server: ru.haodigtal.one
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: "haoyue123123"
-    plugin: v2ray-plugin
-    plugin-opts:
-      mode: websocket
-      tls: true
-      host: ru.haodigtal.one
-      path: "/ws"
-
 
 
 
@@ -135,7 +122,6 @@ proxy-groups:
       - 'NY-bing-ai'
       - 'HK-s'
       - 'HK-BGP'
-      - 'JP'
       - 'US'
       - 'US-2'
 
