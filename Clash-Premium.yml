@@ -58,9 +58,9 @@ proxies:
       path: "/ws"
 
 
-  - name: "JP"
+  - name: "HK-s"
     type: ss
-    server: ru.haodigtal.one
+    server: hks.haodigtal.one
     port: 443
     cipher: chacha20-ietf-poly1305
     password: "haoyue123123"
@@ -68,7 +68,7 @@ proxies:
     plugin-opts:
       mode: websocket
       tls: true
-      host: ru.haodigtal.one
+      host: hks.haodigtal.one
       path: "/ws"
 
 
@@ -77,9 +77,10 @@ proxy-groups:
     type: select
     proxies:
       - 'NY-bing-ai'
+      - 'HK-s'
       - 'US'
       - 'US-2'
-      - 'JP'
+
 
 
 
