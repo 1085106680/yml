@@ -85,15 +85,19 @@ proxies:
        - h2
        - http/1.1
 
-  - name: "RU"
-    type: trojan
-    server: sb-gfw.haodigtal.one
-    port: 20001
-    password: haoyue123123
-    sni: sb-gfw.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
+  - name: "HK-s"
+    type: ss
+    server: hks.haodigtal.one
+    port: 443
+    cipher: chacha20-ietf-poly1305
+    password: "haoyue123123"
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket
+      tls: true
+      host: hks.haodigtal.one
+      path: "/ws"
+
 
   - name: "NY-bing-ai"
     type: trojan
@@ -129,7 +133,7 @@ proxy-groups:
     type: select
     proxies:
       - 'NY-bing-ai'
-      - 'RU'
+      - 'HK-s'
       - 'HK-BGP'
       - 'JP'
       - 'US'
