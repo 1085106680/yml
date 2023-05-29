@@ -87,14 +87,15 @@ proxies:
 
 
   - name: "NY-bing-ai"
-    type: trojan
+    type: vmess
     server: ca.haodigtal.one
-    port: 443
-    password: haoyue123123
-    sni: ca.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
+    port: 8080
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+       path: /ws
 
 
 

@@ -19,14 +19,15 @@ dns:
 
 proxies:
   - name: "NY-bing-ai"
-    type: trojan
+    type: vmess
     server: ca.haodigtal.one
-    port: 443
-    password: haoyue123123
-    sni: ca.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
+    port: 8080
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+       path: /ws
 
   - name: "HK-BGP"
     type: trojan
@@ -55,17 +56,15 @@ proxies:
     #  grpc-service-name: "us.haodigtal.one"
 
   - name: "US-2"
-    type: ss
+    type: vmess
     server: uss.haodigtal.one
-    port: 20001
-    cipher: chacha20-ietf-poly1305
-    password: "haoyue123123"
-    plugin: v2ray-plugin
-    plugin-opts:
-      mode: websocket
-      tls: true
-      host: uss.haodigtal.one
-      path: "/ws"
+    port: 6666
+    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-opts:
+       path: /ws
 
 
   - name: "HK-s"
@@ -86,10 +85,10 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'NY-bing-ai'
-      - 'HK-BGP'
       - 'HK-s'
+      - 'NY-bing-ai'
       - 'US'
+      - 'HK-BGP'
       - 'US-2'
 
 
