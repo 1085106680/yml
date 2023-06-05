@@ -32,12 +32,15 @@ proxies:
   - name: "HK-BGP"
     type: trojan
     server: hk.haodigtal.one
-    port: 20001
+    port: 16666
     password: haoyue123123
     sni: hk.haodigtal.one
     alpn:
        - h2
        - http/1.1
+    network: ws
+    ws-opts:
+      path: /ws
     
   - name: "US"
     type: trojan
