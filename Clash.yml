@@ -31,7 +31,7 @@ sniffer:
 dns:
     
   enable: true                 #DNS开关(false/true)
-  listen: 0.0.0.0:53
+  listen: 0.0.0.0:52
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
