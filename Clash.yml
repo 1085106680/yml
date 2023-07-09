@@ -48,23 +48,19 @@ dns:
 
 proxies:
 
-
-
-
-
-  - name: "HK-BGP"
+ - name: "HK"
     type: trojan
-    server: hk.haodigtal.one
-    port: 16666
+    server: hks.haodigtal.one
+    port: 20000
     password: haoyue123123
-    sni: hk.haodigtal.one
+    sni: hks.haodigtal.one
     alpn:
        - h2
        - http/1.1
     network: ws
     ws-opts:
       path: /ws
-
+    
   - name: "US"
     type: trojan
     server: us.haodigtal.one
@@ -74,33 +70,12 @@ proxies:
     alpn:
        - h2
        - http/1.1
-
-  - name: "HK-s"
-    type: ss
-    server: hks.haodigtal.one
-    port: 443
-    cipher: chacha20-ietf-poly1305
-    password: "haoyue123123"
-    plugin: v2ray-plugin
-    plugin-opts:
-      mode: websocket
-      tls: true
-      host: hks.haodigtal.one
-      path: "/ws"
-
-
-  - name: "NY-bing-ai"
-    type: vmess
-    server: ca.haodigtal.one
-    port: 8080
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-       path: /ws
-
-
+    #network: grpc
+    #udp: true
+    #alpn:
+    #  - h2
+    #grpc-opts:
+    #  grpc-service-name: "us.haodigtal.one"
 
   - name: "US-2"
     type: vmess
@@ -115,17 +90,19 @@ proxies:
 
 
 
+  
+
+
 
 
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'HK-s'
-      - 'HK-BGP'
+      - 'HK'
       - 'US'
       - 'US-2'
-      - 'NY-bing-ai'
+
 
 
   - name: bilibili
