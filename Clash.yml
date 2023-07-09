@@ -48,7 +48,7 @@ dns:
 
 proxies:
 
- - name: "HK"
+  - name: "HK"
     type: trojan
     server: hks.haodigtal.one
     port: 20000
