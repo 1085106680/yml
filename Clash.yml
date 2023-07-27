@@ -88,6 +88,16 @@ proxies:
     ws-opts:
        path: /ws
 
+  - name: "US-v6"
+    type: trojan
+    server:  2607:f130:0:140::1369:f86b
+    port: 20001
+    password: haoyue123123
+    sni: us.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+
 
 
   
@@ -102,6 +112,7 @@ proxy-groups:
       - 'HK'
       - 'US'
       - 'US-2'
+      - 'US-v6'
 
 
 
