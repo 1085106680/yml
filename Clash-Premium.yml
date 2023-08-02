@@ -119,7 +119,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'HK'
+      - 'HK-ss'
       - 'US'
       - 'US-2'
       - 'US-v6'
