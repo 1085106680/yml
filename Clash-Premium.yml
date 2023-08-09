@@ -63,7 +63,7 @@ proxies:
   - name: "HK-ss"
     type: ss
     server: hks.haodigtal.one
-    port: 443
+    port: 50000
     cipher: chacha20-ietf-poly1305
     password: "haoyue123123"
     plugin: v2ray-plugin
@@ -71,7 +71,7 @@ proxies:
       mode: websocket # no QUIC now
       #tls: true
       path: "/ws"
-     # host: bing.com
+      host: bing.com
     
   - name: "US"
     type: trojan
