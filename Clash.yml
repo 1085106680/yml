@@ -39,6 +39,8 @@ dns:
   - 223.5.5.5
   - 119.29.29.29                      #默认DNS服务器，支持udp/tcp/dot/doh/doq
   - https://doh.pub/dns-query
+  - 240C::6666
+
   fallback:
   - tls://dns.google:853
   - tls://1.0.0.1:853
@@ -51,15 +53,27 @@ proxies:
   - name: "HK"
     type: trojan
     server: hks.haodigtal.one
-    port: 20000
+    port: 50000
     password: haoyue123123
     sni: hks.haodigtal.one
     alpn:
        - h2
        - http/1.1
-    network: ws
-    ws-opts:
-      path: /ws
+    network: tcp
+  #  ws-opts:
+  #    path: /ws
+  - name: "HK-ss"
+    type: ss
+    server: hks.haodigtal.one
+    port: 50000
+    cipher: chacha20-ietf-poly1305
+    password: "haoyue123123"
+    plugin: v2ray-plugin
+    plugin-opts:
+      mode: websocket # no QUIC now
+      #tls: true
+      path: "/ws"
+      host: bing.com
     
   - name: "US"
     type: trojan
@@ -109,7 +123,8 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'HK'
+      #- 'HK'
+      - 'HK-ss'
       - 'US'
       - 'US-2'
       - 'US-v6'
@@ -147,7 +162,28 @@ proxy-groups:
 
 
 rules:
- - DOMAIN-SUFFIX,acl4.ssr,DIRECT
+ - DOMAIN-KEYWORD,steambang.com,DIRECT
+ - DOMAIN-KEYWORD,steambig.com,DIRECT
+ - DOMAIN-KEYWORD,steamboxs.com,DIRECT
+ - DOMAIN-KEYWORD,steamchina.com,DIRECT
+ - DOMAIN-KEYWORD,steamcn.com,DIRECT
+ - DOMAIN-KEYWORD,steamdd.com,DIRECT
+ - DOMAIN-KEYWORD,steampp.net,DIRECT
+ - DOMAIN-KEYWORD,steamproxy.net,DIRECT
+ - DOMAIN-KEYWORD,steamrepcn.com,DIRECT
+ - DOMAIN-KEYWORD,steamxdf.com,DIRECT
+ - DOMAIN-SUFFIX,steambroadcast.akamaized.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steammobile.akamaized.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steampipe-kr.akamaized.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steampipe-partner.akamaized.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steampipe.akamaized.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steamstore-a.akamaihd.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steamusercontent-a.akamaihd.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steamuserimages-a.akamaihd.net,🚀 节点选择
+ - DOMAIN-SUFFIX,steamvideo-a.akamaihd.net,🚀 节点选择
+ - DOMAIN-SUFFIX,acl4.ssr,DIRECT,
  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
  - DOMAIN-SUFFIX,lan,DIRECT
@@ -1843,21 +1879,10 @@ rules:
  - DOMAIN-SUFFIX,tools.l.google.com,DIRECT
  - DOMAIN-SUFFIX,www-googletagmanager.l.google.com,DIRECT
  - DOMAIN,csgo.wmsj.cn,DIRECT
- - DOMAIN,dl.steam.clngaa.com,DIRECT
- - DOMAIN,dl.steam.ksyna.com,DIRECT
  - DOMAIN,dota2.wmsj.cn,DIRECT
  - DOMAIN,st.dl.bscstorage.net,DIRECT
  - DOMAIN,st.dl.eccdnx.com,DIRECT
  - DOMAIN,st.dl.pinyuncloud.com,DIRECT
- - DOMAIN,steampipe.steamcontent.tnkjmec.com,DIRECT
- - DOMAIN,steampowered.com.8686c.com,DIRECT
- - DOMAIN,steamstatic.com.8686c.com,DIRECT
- - DOMAIN,wmsjsteam.com,DIRECT
- - DOMAIN,xz.pphimalayanrt.com,DIRECT
- - DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
- - DOMAIN-SUFFIX,steamchina.com,DIRECT
- - DOMAIN-SUFFIX,steamcontent.com,DIRECT
- - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
  - DOMAIN-SUFFIX,1password.com,🚀 节点选择
  - DOMAIN-SUFFIX,adguard.org,🚀 节点选择
  - DOMAIN-SUFFIX,bit.no.com,🚀 节点选择
@@ -2201,20 +2226,6 @@ rules:
  - DOMAIN-SUFFIX,underlords.com,🚀 节点选择
  - DOMAIN-SUFFIX,valvesoftware.com,🚀 节点选择
  - DOMAIN-SUFFIX,playartifact.com,🚀 节点选择
- - DOMAIN-SUFFIX,steam-chat.com,🚀 节点选择
- - DOMAIN-SUFFIX,steamcommunity.com,🚀 节点选择
- - DOMAIN-SUFFIX,steamgames.com,🚀 节点选择
- - DOMAIN-SUFFIX,steampowered.com,🚀 节点选择
- - DOMAIN-SUFFIX,steamserver.net,🚀 节点选择
- - DOMAIN-SUFFIX,steamstatic.com,🚀 节点选择
- - DOMAIN-SUFFIX,steamstat.us,🚀 节点选择
- - DOMAIN,steambroadcast.akamaized.net,🚀 节点选择
- - DOMAIN,steamcdn-a.akamaihd.net,🚀 节点选择
- - DOMAIN,steamcommunity-a.akamaihd.net,🚀 节点选择
- - DOMAIN,steamstore-a.akamaihd.net,🚀 节点选择
- - DOMAIN,steamusercontent-a.akamaihd.net,🚀 节点选择
- - DOMAIN,steamuserimages-a.akamaihd.net,🚀 节点选择
- - DOMAIN,steampipe.akamaized.net,🚀 节点选择
  - DOMAIN-SUFFIX,tap.io,🚀 节点选择
  - DOMAIN-SUFFIX,taptap.tw,🚀 节点选择
  - DOMAIN-SUFFIX,twitch.tv,🚀 节点选择
@@ -2543,22 +2554,12 @@ rules:
  - DOMAIN-SUFFIX,playstationnetwork.com,DIRECT
  - DOMAIN-SUFFIX,sony.com,DIRECT
  - DOMAIN-SUFFIX,sonyentertainmentnetwork.com,DIRECT
- - DOMAIN-SUFFIX,cm.steampowered.com,DIRECT
- - DOMAIN-SUFFIX,steamcontent.com,DIRECT
- - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
- - DOMAIN-SUFFIX,steamchina.com,DIRECT
  - DOMAIN,csgo.wmsj.cn,DIRECT
  - DOMAIN,dota2.wmsj.cn,DIRECT
- - DOMAIN,wmsjsteam.com,DIRECT
- - DOMAIN,dl.steam.clngaa.com,DIRECT
- - DOMAIN,dl.steam.ksyna.com,DIRECT
  - DOMAIN,st.dl.bscstorage.net,DIRECT
  - DOMAIN,st.dl.eccdnx.com,DIRECT
  - DOMAIN,st.dl.pinyuncloud.com,DIRECT
  - DOMAIN,xz.pphimalayanrt.com,DIRECT
- - DOMAIN,steampipe.steamcontent.tnkjmec.com,DIRECT
- - DOMAIN,steampowered.com.8686c.com,DIRECT
- - DOMAIN,steamstatic.com.8686c.com,DIRECT
  - DOMAIN-SUFFIX,foxmail.com,DIRECT
  - DOMAIN-SUFFIX,gtimg.com,DIRECT
  - DOMAIN-SUFFIX,idqqimg.com,DIRECT
