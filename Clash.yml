@@ -172,6 +172,25 @@ rules:
  - DOMAIN-KEYWORD,steamproxy.net,DIRECT
  - DOMAIN-KEYWORD,steamrepcn.com,DIRECT
  - DOMAIN-KEYWORD,steamxdf.com,DIRECT
+ - DOMAIN-KEYWORD,steam-api.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steam-chat.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steam.apac.qtlglb.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steam.cdn.on.net,🚀 节点选择
+ - DOMAIN-KEYWORD,steam.eca.qtlglb.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steam.naeu.qtlglb.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steam.ru.qtlglb.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamcommunity.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamcontent.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamdb.info,🚀 节点选择
+ - DOMAIN-KEYWORD,steamdeck.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamgames.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamofporn.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steampowered.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamserver.net,🚀 节点选择
+ - DOMAIN-KEYWORD,steamstatic.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamunlocked.net,🚀 节点选择
+ - DOMAIN-KEYWORD,steamusercontent.com,🚀 节点选择
+ - DOMAIN-KEYWORD,steamygamer.com,🚀 节点选择
  - DOMAIN-SUFFIX,steambroadcast.akamaized.net,🚀 节点选择
  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🚀 节点选择
  - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,🚀 节点选择
