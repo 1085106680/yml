@@ -32,7 +32,7 @@ dns:
     
   enable: true                 #DNS开关(false/true)
   listen: 0.0.0.0:52
-  ipv6: false
+  ipv6: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   nameserver:  
@@ -90,6 +90,15 @@ proxies:
     #  - h2
     #grpc-opts:
     #  grpc-service-name: "us.haodigtal.one"
+  - name: "KR"
+    type: trojan
+    server: kr.haodigtal.one
+    port: 443
+    password: haoyue123123
+    sni: kr.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
 
   - name: "US-2"
     type: vmess
@@ -112,6 +121,15 @@ proxies:
        - h2
        - http/1.1
 
+  - name: "US-ss"
+    type: ss
+    server: 20.200.208.72
+    port: 443
+    cipher: 2022-blake3-aes-128-gcm 
+    password: "6ppyOoR3wVgu3l54ZKSmaA=="
+    udp: true
+    udp-over-tcp: true
+
 
 
   
@@ -125,6 +143,8 @@ proxy-groups:
     proxies:
       #- 'HK'
       - 'HK-ss'
+      - 'KR'
+      - 'US-ss'
       - 'US'
       - 'US-2'
       - 'US-v6'
@@ -172,25 +192,6 @@ rules:
  - DOMAIN-KEYWORD,steamproxy.net,DIRECT
  - DOMAIN-KEYWORD,steamrepcn.com,DIRECT
  - DOMAIN-KEYWORD,steamxdf.com,DIRECT
- - DOMAIN-KEYWORD,steam-api.com,🚀 节点选择
- - DOMAIN-KEYWORD,steam-chat.com,🚀 节点选择
- - DOMAIN-KEYWORD,steam.apac.qtlglb.com,🚀 节点选择
- - DOMAIN-KEYWORD,steam.cdn.on.net,🚀 节点选择
- - DOMAIN-KEYWORD,steam.eca.qtlglb.com,🚀 节点选择
- - DOMAIN-KEYWORD,steam.naeu.qtlglb.com,🚀 节点选择
- - DOMAIN-KEYWORD,steam.ru.qtlglb.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamcommunity.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamcontent.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamdb.info,🚀 节点选择
- - DOMAIN-KEYWORD,steamdeck.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamgames.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamofporn.com,🚀 节点选择
- - DOMAIN-KEYWORD,steampowered.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamserver.net,🚀 节点选择
- - DOMAIN-KEYWORD,steamstatic.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamunlocked.net,🚀 节点选择
- - DOMAIN-KEYWORD,steamusercontent.com,🚀 节点选择
- - DOMAIN-KEYWORD,steamygamer.com,🚀 节点选择
  - DOMAIN-SUFFIX,steambroadcast.akamaized.net,🚀 节点选择
  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🚀 节点选择
  - DOMAIN-SUFFIX,steamcommunity-a.akamaihd.net,🚀 节点选择
