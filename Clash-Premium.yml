@@ -60,6 +60,18 @@ proxies:
     network: tcp
   #  ws-opts:
   #    path: /ws
+  
+  - name: "US-圣何塞"
+    type: trojan
+    server: uss.haodigtal.one
+    port: 443
+    password: haoyue123123
+    sni: uss.haodigtal.one
+    alpn:
+       - h2
+       - http/1.1
+    network: tcp
+    
   - name: "HK-ss"
     type: ss
     server: hks.haodigtal.one
@@ -100,15 +112,6 @@ proxies:
     ws-opts:
        path: /ws
 
-  - name: "US-v6"
-    type: trojan
-    server:  2607:f130:0:140::1369:f86b
-    port: 20001
-    password: haoyue123123
-    sni: us.haodigtal.one
-    alpn:
-       - h2
-       - http/1.1
 
   
 
@@ -120,9 +123,8 @@ proxy-groups:
     type: select
     proxies:
       - 'HK-ss'
+      - 'US-圣何塞'
       - 'US'
-      - 'US-2'
-      - 'US-v6'
 
 
 
