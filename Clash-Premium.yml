@@ -16,9 +16,8 @@ dns:
   fake-ip-range: 198.18.0.1/16
   nameserver:  
   - 223.5.5.5
-  - 114.114.114.114
-  - 8.8.8.8
-  - 119.29.29.29                      #默认DNS服务器，支持udp/tcp/dot/doh/doq
+  - 119.29.29.29  
+  - dhcp://en0  #默认DNS服务器，支持udp/tcp/dot/doh/doq
   - https://doh.pub/dns-query
   fallback:
   - tls://dns.google:853
