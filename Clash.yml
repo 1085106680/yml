@@ -18,7 +18,6 @@ dns:
   default-nameserver:
     - 223.6.6.6
     - 119.29.29.29
-    - dhcp://en0
     - tls://223.5.5.5:853
     - system # append DNS server from system configuration. If not found, it would print an error log and skip.
   enhanced-mode: fake-ip # or redir-host
