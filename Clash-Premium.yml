@@ -28,14 +28,13 @@ dns:
 
 proxies:
 
-  - name: "HK"
+  - name: "JP"
     type: trojan
-    server: hks.haodigtal.one
-    port: 50000
+    server: jp.haodigtal.one
+    port: 16667
     password: haoyue123123
-    sni: hks.haodigtal.one
+    sni: jp.haodigtal.one
     alpn:
-       - h2
        - http/1.1
     network: tcp
   #  ws-opts:
@@ -102,7 +101,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'HK-ss'
+      - 'JP'
       - 'US-圣何塞'
       - 'US'
 
