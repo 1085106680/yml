@@ -138,6 +138,7 @@ proxy-groups:
 
 
 rules:
+ - DOMAIN-SUFFIX,aod-ssl.itunes.apple.com,DIRECT
  - DOMAIN-SUFFIX,acl4.ssr,DIRECT
  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
  - DOMAIN-SUFFIX,ip6-loopback,DIRECT
