@@ -30,10 +30,10 @@ proxies:
 
   - name: "JP"
     type: trojan
-    server: jp.haodigtal.one
+    server: jp.haoge666.xyz
     port: 16667
     password: haoyue123123
-    sni: jp.haodigtal.one
+    sni: jp.haoge666.xyz
     alpn:
        - h2
     network: tcp
@@ -44,10 +44,10 @@ proxies:
     
   - name: "US"
     type: trojan
-    server: us.haodigtal.one
+    server: us.haoge666.xyz
     port: 20001
     password: haoyue123123
-    sni: us.haodigtal.one
+    sni: us.haoge666.xyz
     alpn:
        - h2
        - http/1.1
@@ -60,7 +60,7 @@ proxies:
 
   - name: "US-2"
     type: vmess
-    server: la.haodigtal.one
+    server: 146.190.120.172
     port: 8080
     uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
     alterId: 0
