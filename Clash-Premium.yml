@@ -28,17 +28,25 @@ dns:
 
 proxies:
 
-  - name: "JP"
+  - name: "hks"
     type: trojan
-    server: jp.haoge666.xyz
-    port: 16667
+    server: hks.haoge666.xyz
+    port: 12138
     password: haoyue123123
-    sni: jp.haoge666.xyz
-    alpn:
-       - h2
-    network: tcp
-  #  ws-opts:
-  #    path: /ws
+    network: grpc
+    sni: hks.haoge666.xyz
+    grpc-opts:
+      grpc-service-name: "sb"
+   
+  - name: "hk"
+    type: trojan
+    server: hk.haoge666.xyz
+    port: 12138
+    password: haoyue123123
+    network: grpc
+    sni: hk.haoge666.xyz
+    grpc-opts:
+      grpc-service-name: "sb"
   
     
     
@@ -51,23 +59,7 @@ proxies:
     alpn:
        - h2
        - http/1.1
-    #network: grpc
-    #udp: true
-    #alpn:
-    #  - h2
-    #grpc-opts:
-    #  grpc-service-name: "us.haodigtal.one"
 
-  - name: "US-2"
-    type: vmess
-    server: 146.190.120.172
-    port: 8080
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-       path: /ws
 
 
   
@@ -79,9 +71,9 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'JP'
+      - 'hks'
+      - 'hk'
       - 'US'
-      - 'US-2'
 
 
 
