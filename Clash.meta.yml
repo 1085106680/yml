@@ -1,61 +1,65 @@
 mixed-port: 7890
-tcp-concurrent: true  
 allow-lan: false                  #允许局域网连接(false/true)
 bind-address:                     #监听IP白名单（当allow-lan：true），只允许列表设备
   '*'    
 log-level: info
-ipv6: true
+ipv6: false
 mode: rule 
 external-controller: 0.0.0.0:9090
+
+geodata-mode: true
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  
+  
+sniffer:
+  enable: true
+  sniff:
+    TLS:
+      ports: [443, 8443]
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+      
 dns:
-    
-  enable: true                 #DNS开关(false/true)
-  listen: 0.0.0.0:53
+  enable: true               #DNS开关(false/true)
+  listen: 0.0.0.0:52
   ipv6: false
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  fake-ip-range: 28.0.0.1/8
+  default-nameserver:
+    - 223.5.5.5
   nameserver:  
-  - 223.5.5.5
-  - 119.29.29.29  
-  - dhcp://en0  #默认DNS服务器，支持udp/tcp/dot/doh/doq
-  - https://doh.pub/dns-query
-  fallback:
-  - tls://dns.google:853
-  - tls://1.0.0.1:853
+    - 'tls://8.8.4.4'
+    - 'tls://1.0.0.1'
+
 
 
 
 
 proxies:
    
-  - name: "vless-grpc"
-    type: vless
-    server: hk.haoge666.xyz
-    port: 16667
-    uuid: haoyue123123
-    network: grpc
-    tls: true
-    udp: true
-    #flow:
-    # skip-cert-verify: true
-    #client-fingerprint: chrome
-    servername: hk
-    #grpc-opts:
-    #  grpc-service-name: "hk"
-    #reality-opts:
-    #  public-key: CrrQSjAG_YkHLwvM2M-7XkKJilgL5upBKCp0od0tLhE
-    # short-id: 10f897e26c4b9478
-  - name: "JP"
+  - name: "hks"
     type: trojan
-    server: jp.haoge666.xyz
-    port: 58400
+    server: hks.haoge666.xyz
+    port: 12138
     password: haoyue123123
-    sni: jp.haoge666.xyz
-    alpn:
-       - h2
-    network: tcp
-  #  ws-opts:
-  #    path: /ws
+    network: grpc
+    sni: hks.haoge666.xyz
+    grpc-opts:
+      grpc-service-name: "sb"
+   
+  - name: "hk"
+    type: trojan
+    server: hk.haoge666.xyz
+    port: 12138
+    password: haoyue123123
+    network: grpc
+    sni: hk.haoge666.xyz
+    grpc-opts:
+      grpc-service-name: "sb"
   
     
     
@@ -68,23 +72,6 @@ proxies:
     alpn:
        - h2
        - http/1.1
-    #network: grpc
-    #udp: true
-    #alpn:
-    #  - h2
-    #grpc-opts:
-    #  grpc-service-name: "us.haodigtal.one"
-
-  - name: "US-2"
-    type: vmess
-    server: 146.190.120.172
-    port: 8080
-    uuid: 0bd96194-9926-47b1-8e58-0ede8d96b7d5
-    alterId: 0
-    cipher: auto
-    network: ws
-    ws-opts:
-       path: /ws
 
 
   
