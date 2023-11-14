@@ -14,8 +14,9 @@ dns:
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  nameserver:  
+  default-nameserver:
   - 223.5.5.5
+  nameserver:  
   - 119.29.29.29  
   - dhcp://en0  #默认DNS服务器，支持udp/tcp/dot/doh/doq
   - https://doh.pub/dns-query
