@@ -83,10 +83,10 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'vless-grpc'
-      - 'JP'
+      - 'hks'
+      - 'hk'
       - 'US'
-      - 'US-2'
+
 
 
 
