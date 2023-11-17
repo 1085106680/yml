@@ -25,13 +25,16 @@ sniffer:
       
 dns:
   enable: true               #DNS开关(false/true)
-  listen: 0.0.0.0:52
+  listen: 0.0.0.0:53
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 28.0.0.1/8
   default-nameserver:
     - 223.5.5.5
-  nameserver:  
+    - 119.29.29.29
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29  
     - 'tls://8.8.4.4'
     - 'tls://1.0.0.1'
 
