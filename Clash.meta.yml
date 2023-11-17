@@ -54,12 +54,12 @@ proxies:
   - name: "hk"
     type: trojan
     server: hk.haoge666.xyz
-    port: 12138
+    port: 12139
     password: haoyue123123
-    network: grpc
     sni: hk.haoge666.xyz
-    grpc-opts:
-      grpc-service-name: "sb"
+    alpn:
+       - h2
+       - http/1.1
   
     
     
