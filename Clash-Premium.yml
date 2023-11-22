@@ -29,18 +29,22 @@ proxies:
   - name: "hks"
     type: trojan
     server: hks.haoge666.xyz
-    port: 12138
+    port: 12139
     password: haoyue123123
-    network: grpc
-    sni: hks.haoge666.xyz
-    grpc-opts:
-      grpc-service-name: "sb"
+    alpn:
+       - h2
+       - http/1.1
+
    
   - name: "hk"
     type: trojan
     server: hk.haoge666.xyz
     port: 12139
     password: haoyue123123
+    alpn:
+       - h2
+       - http/1.1
+
   
     
     
@@ -102,6 +106,7 @@ proxy-groups:
 
 
 rules:
+ - DOMAIN-SUFFIX,ai.haoge666.xyz,DIRECT
  - DOMAIN-SUFFIX,aod-ssl.itunes.apple.com,DIRECT
  - DOMAIN-SUFFIX,acl4.ssr,DIRECT
  - DOMAIN-SUFFIX,ip6-localhost,DIRECT
