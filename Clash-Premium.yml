@@ -136,7 +136,13 @@ rule-providers:
     url: "http://us.haoge666.xyz:7890/rule/applications.txt"
     path: ./ruleset/applications.yaml
     interval: 86400
-      
+    
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
 
 
 rules:
