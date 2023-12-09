@@ -29,7 +29,7 @@ proxies:
   - name: "hks"
     type: trojan
     server: hks.haoge666.xyz
-    port: 25666
+    port: 48400
     password: haoyue123123
     alpn:
        - h2
