@@ -29,11 +29,15 @@ proxies:
   - name: "hks"
     type: trojan
     server: hks.haoge666.xyz
-    port: 48400
+    port: 59100
     password: haoyue123123
+    network: ws
+    tls: true
     alpn:
-       - h2
+       #- h2
        - http/1.1
+    ws-opts:
+       path: /caddy2
 
    
   - name: "hk"
