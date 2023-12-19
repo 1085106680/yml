@@ -29,7 +29,7 @@ proxies:
   - name: "hks"
     type: trojan
     server: hks.haoge666.xyz
-    port: 59180
+    port: 59190
     password: haoyue123123!!
     network: ws
     tls: true
