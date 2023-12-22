@@ -30,7 +30,7 @@ proxies:
     type: vmess
     server: hks.haoge666.xyz
     port: 8080
-    uuid: haoyue123123
+    uuid: "haoyue123123"
     network: ws
     alterld: 0
     cipher: auto
