@@ -32,7 +32,7 @@ proxies:
     port: 8080
     uuid: haoyue123123
     network: ws
-    cipher：auto
+    cipher: auto
 
    
   - name: "hk"
