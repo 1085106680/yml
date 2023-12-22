@@ -32,7 +32,7 @@ proxies:
     port: 8080
     uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
     network: ws
-    alterld: 0
+    alterId: 0
     cipher: auto
 
    
