@@ -27,17 +27,12 @@ dns:
 proxies:
 
   - name: "hks"
-    type: trojan
+    type: vmess
     server: hks.haoge666.xyz
-    port: 59190
-    password: haoyue123123!!
+    port: 8080
+    uuid: haoyue123123
     network: ws
-    tls: true
-    alpn:
-       #- h2
-       - http/1.1
-    ws-opts:
-       path: /caddy2
+    cipher：auto
 
    
   - name: "hk"
