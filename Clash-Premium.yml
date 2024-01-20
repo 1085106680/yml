@@ -36,14 +36,15 @@ proxies:
     cipher: auto
 
    
-  - name: "hk"
+  - name: "US-sa"
     type: trojan
-    server: hk.haoge666.xyz
-    port: 12139
-    password: haoyue123123
-    alpn:
-       - h2
-       - http/1.1
+    server: ai.haoge666.xyz
+    port: 8080
+    uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
+    alterId: 0
+    network: ws
+    cipher: auto
+
 
   
     
@@ -70,7 +71,7 @@ proxy-groups:
     type: select
     proxies:
       - 'hks'
-      - 'hk'
+      - 'US-sa'
       - 'US'
 
 
