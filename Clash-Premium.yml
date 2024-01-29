@@ -29,7 +29,7 @@ proxies:
   - name: "hks"
     type: vmess
     server: hks.haoge666.xyz
-    port: 8080
+    port: 12138
     uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
     network: ws
     alterId: 0
@@ -39,7 +39,7 @@ proxies:
   - name: "US-sa"
     type: vmess
     server: ai.haoge666.xyz
-    port: 8080
+    port: 12138
     uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
     alterId: 0
     network: ws
@@ -50,14 +50,13 @@ proxies:
     
     
   - name: "US"
-    type: trojan
+    type: vmess
     server: us.haoge666.xyz
-    port: 20001
-    password: haoyue123123
-    sni: us.haoge666.xyz
-    alpn:
-       - h2
-       - http/1.1
+    port: 12138
+    uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
+    alterId: 0
+    network: ws
+    cipher: auto
 
 
 
