@@ -9,7 +9,7 @@ mode: rule
 
 dns:
     
-  enable: true                 #DNS开关(false/true)
+  enable: true                 
   listen: 0.0.0.0:53
   ipv6: false
   enhanced-mode: fake-ip
