@@ -140,7 +140,7 @@ rule-providers:
   private:
     type: http
     behavior: domain
-    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    url: "http://us.haoge666.xyz:7890/rule/private.txt"
     path: ./ruleset/private.yaml
     interval: 86400
 
