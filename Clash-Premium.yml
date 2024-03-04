@@ -32,16 +32,16 @@ proxies:
     port: 12139
     uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
     network: ws
-    alterId: 100
+    alterId: 0
     cipher: auto
 
    
   - name: "US-sa"
     type: vmess
     server: ai.haoge666.xyz
-    port: 12138
+    port: 8080
     uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
-    alterId: 0
+    alterId: 100
     network: ws
     cipher: auto
 
