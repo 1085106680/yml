@@ -52,8 +52,8 @@ proxies:
   - name: "US"
     type: vmess
     server: us.haoge666.xyz
-    port: 12138
-    uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
+    port: 12139
+    uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
     network: ws
     cipher: auto
