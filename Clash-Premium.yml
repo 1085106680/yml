@@ -41,7 +41,7 @@ proxies:
     server: ai.haoge666.xyz
     port: 8080
     uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
-    alterId: 100
+    alterId: 16
     network: ws
     cipher: auto
 
