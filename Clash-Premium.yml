@@ -40,7 +40,7 @@ proxies:
     type: vmess
     server: ai.haoge666.xyz
     port: 8080
-    uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
+    uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
     network: ws
     cipher: auto
