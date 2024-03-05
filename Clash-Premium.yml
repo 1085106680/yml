@@ -29,11 +29,13 @@ proxies:
   - name: "hks"
     type: vmess
     server: hks.haoge666.xyz
-    port: 12139
-    uuid: 0e76b2e3-c32e-734c-9d85-11b86bee792d
+    port: 25565
+    uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     network: ws
     alterId: 0
     cipher: auto
+    ws-opts:
+      path: /fullcone
 
    
   - name: "US-sa"
@@ -52,12 +54,13 @@ proxies:
   - name: "US"
     type: vmess
     server: us.haoge666.xyz
-    port: 12139
+    port: 25565
     uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
     network: ws
     cipher: auto
-
+    ws-opts:
+      path: /fullcone
 
 
   
