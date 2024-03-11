@@ -4,7 +4,7 @@ allow-lan: false                  #允许局域网连接(false/true)
 bind-address:                     #监听IP白名单（当allow-lan：true），只允许列表设备
   '*'    
 log-level: info
-ipv6: true
+ipv6: false
 mode: rule 
 
 dns:
