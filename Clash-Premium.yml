@@ -54,13 +54,15 @@ proxies:
   - name: "US"
     type: vmess
     server: us.haoge666.xyz
-    port: 51400
+    port: 51401
     uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
     network: ws
     cipher: auto
     ws-opts:
       path: /fullcone
+      headers:
+         Host: bing.com
 
 
   
