@@ -120,6 +120,20 @@ rule-providers:
     url: "http://us.haoge666.xyz:7890/rule/gfw.txt"
     path: ./ruleset/gfw.yaml
     interval: 86400
+    
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "http://us.haoge666.xyz:7890/rule/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+    
+  proxy:
+    type: http
+    behavior: domain
+    url: "http://us.haoge666.xyz:7890/rule/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
 
   tld-not-cn:
     type: http
@@ -147,6 +161,27 @@ rule-providers:
     behavior: domain
     url: "http://us.haoge666.xyz:7890/rule/private.txt"
     path: ./ruleset/private.yaml
+    interval: 86400
+    
+  icloud:
+    type: http
+    behavior: domain
+    url: "http://us.haoge666.xyz:7890/rule/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "http://us.haoge666.xyz:7890/rule/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+    
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "http://us.haoge666.xyz:7890/rule/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
     interval: 86400
 
 
