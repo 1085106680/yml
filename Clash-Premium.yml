@@ -40,7 +40,7 @@ proxies:
   - name: "US"
     type: vmess
     server: us.haoge666.xyz
-    port: 51401
+    port: 51402
     uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
     network: ws
