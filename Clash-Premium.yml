@@ -54,7 +54,7 @@ proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - 'hks'
+      - 'hk'
       - 'US'
 
   - name: 🐟 漏网之鱼
