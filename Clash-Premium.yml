@@ -57,7 +57,7 @@ proxy-groups:
       - 'hk'
       - 'US'
 
-  - name: ?? 漏网之鱼
+  - name: 漏网之鱼
     type: select
     proxies:
       - ?? 节点选择
@@ -7981,4 +7981,4 @@ rules:
   - PROCESS-NAME,Weiyun.exe,DIRECT
   - PROCESS-NAME,baidunetdisk.exe,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,?? 漏网之鱼
+  - MATCH,漏网之鱼
