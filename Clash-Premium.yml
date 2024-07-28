@@ -40,15 +40,15 @@ proxies:
   - name: "US"
     type: vmess
     server: us.haoge666.xyz
-    port: 51403
+    port: 50000
     uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
     network: ws
-    cipher: auto
+    cipher: chacha20-poly1305
     ws-opts:
       path: /fullcone
       headers:
-         Host: bing.com
+         Host: baidu.com
          
 proxy-groups:
   - name: 节点选择
