@@ -55,11 +55,7 @@ proxy-groups:
     proxies:
       - DIRECT
       - 🚀 节点选择
-  - name: 🛑 全球拦截
-    type: select
-    proxies:
-      - REJECT
-      - DIRECT
+
   - name: 🐟 漏网之鱼
     type: select
     proxies:
