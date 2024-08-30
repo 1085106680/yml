@@ -12,7 +12,7 @@ proxies:
   - name: "hk"
     type: vmess
     server: hk.haoge666.xyz
-    port: 25571
+    port: 25572
     uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     network: ws
     alterId: 0
