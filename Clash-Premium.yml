@@ -10,15 +10,15 @@ dns:
     - 223.5.5.5
 proxies:
   - name: "hk"
-    type: vmess
+    type: trojan
     server: hk.haoge666.xyz
     port: 29999
-    uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
-    network: ws
-    alterId: 0
-    cipher: aes-128-gcm
-    ws-opts:
-      path: /fullcone
+    network: grpc
+    sni: hk.haoge666.xyz
+    password: "mmovomm"
+    udp: true
+    grpc-opts:
+      grpc-service-name: "mmovomm"
 
    
   - name: "US-sa"
