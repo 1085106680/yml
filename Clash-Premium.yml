@@ -11,10 +11,10 @@ dns:
 proxies:
   - name: "hk"
     type: trojan
-    server: hk.haoge666.xyz
+    server: hk.mmmovommm.xyz
     port: 29999
     network: grpc
-    sni: hk.haoge666.xyz
+    sni: hk.mmmovommm.xyz
     password: "mmovomm"
     udp: true
     grpc-opts:
@@ -23,7 +23,7 @@ proxies:
    
   - name: "US-sa"
     type: vmess
-    server: ai.haoge666.xyz
+    server: ai.mmmovommm.xyz
     port: 8080
     uuid: c707c459-e368-5297-8a44-c5e4cbcde9d8
     alterId: 0
@@ -33,10 +33,10 @@ proxies:
     
   - name: "US"
     type: trojan
-    server: us.haoge666.xyz
+    server: us.mmmovommm.xyz
     port: 29999
     network: grpc
-    sni: us.haoge666.xyz
+    sni: us.mmmovommm.xyz
     password: "mmovomm"
     udp: true
     grpc-opts:
