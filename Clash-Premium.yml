@@ -98,6 +98,20 @@ proxy-groups:
 
 
 rules:
+  #steam
+  - DOMAIN,steam-chat.com,PROXY
+  - DOMAIN-SUFFIX,steamstatic.com,PROXY
+  - DOMAIN-SUFFIX,steamserver.net,DIRECT
+  - DOMAIN,api.steampowered.com,PROXY
+  - DOMAIN,store.steampowered.com,PROXY
+  - DOMAIN-SUFFIX,steamcommunity.com,PROXY
+  - DOMAIN-SUFFIX,steamgames.com,DIRECT
+  - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
+  - DOMAIN-SUFFIX,steamcontent.com,PROXY
+  - DOMAIN-SUFFIX,steamstatic.com,DIRECT
+  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
+  - DOMAIN-SUFFIX,steamstat.us,DIRECT
+  #steam
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
