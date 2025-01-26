@@ -1,6 +1,6 @@
 port: 7890
 socks-port: 7891
-allow-lan: true
+allow-lan: false
 mode: Rule
 log-level: info
 external-controller: :9090
@@ -8,9 +8,18 @@ dns:
   enabled: true
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  nameserver:
+  default-nameserver:
     - 223.5.5.5
+    - 119.29.29.29
+    - 8.8.8.8
+    - 8.8.4.4
+  nameserver:
     - tls://223.5.5.5:853
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query
+  fallback:
+    - tls://dns.google:853
+    - https://dns.google/dns-query
 
 rule-providers:
 
