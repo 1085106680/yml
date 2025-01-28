@@ -76,7 +76,7 @@ proxies:
     network: grpc
     sni: hks.mmovomm.pro
     password: "mmovomm"
-    udp: true
+    udp: false
     grpc-opts:
       grpc-service-name: "mmovomm"
 
